@@ -1,17 +1,12 @@
-<!-- Vendor -->
-<script src="/frontend/vendor/plugins/js/plugins.min.js"></script>
-<script src="/frontend/vendor/particles/particles.min.js"></script>
+<script src="/frontend/vendor/jquery/jquery.min.js"></script>
+<script src="/frontend/vendor/jquery.plugin/jquery.plugin.min.js"></script>
+<script src="/frontend/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/frontend/vendor/zoom/jquery.zoom.js"></script>
+<script src="/frontend/vendor/jquery.countdown/jquery.countdown.min.js"></script>
+<script src="/frontend/vendor/skrollr/skrollr.min.js"></script>
 
-<!-- Theme Base, Components and Settings -->
-<script src="/frontend/js/theme.js"></script>
+<!-- Swiper JS -->
+<script src="/frontend/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Demo -->
-<script src="/frontend/js/demos/demo-business-consulting-4.js"></script>
-
-<!-- Theme Custom -->
-<script src="/frontend/js/custom.js"></script>
-
-<!-- Theme Initialization Files -->
-<script src="/frontend/js/theme.init.js"></script>
-
-
+<!-- Main JS -->
+<script src="/frontend/js/main.min.js"></script>

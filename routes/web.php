@@ -11,25 +11,15 @@
 |
 */
 
-
 Auth::routes();
 
 
-
-
-
-
-
 //tr sayfalar
-Route::get('/','TrpageController@index')->name('anasayfa');
-Route::get('/iletişim','TrpageController@iletisim')->name('iletisim');
-Route::get('/hakkimizda','TrpageController@hakkimizda')->name('hakkimizda');
-Route::get('/hizmetlerimiz','TrpageController@hizmetlerimiz')->name('hizmetlerimiz');
-Route::get('/haberler','TrpageController@blog')->name('tr.blog');
+Route::get('/','SayfaController@index')->name('anasayfa');
+Route::get('blog','TrpageController@blog')->name('en.news');
 Route::get('/haber-kategori/{id}','TrpageController@blogkat')->name('tr.bkategori');
 Route::get('/haberler/{id}','TrpageController@post')->name('tr.sblog');
-Route::get('/hizmetler/{id}','TrpageController@hizmetpost')->name('hizmet.blog');
-Route::get('/endustri/{id}','TrpageController@endustripost')->name('endustri.blog');
+
 
 ////////////////////////////
 Route::get('contact-us','SayfaController@iletisim')->name('contact-us');
@@ -48,8 +38,21 @@ Route::get('/terms-of-use','SayfaController@termscondition')->name('termofuse');
 
 ///user backend
 ///
-//
 
+Route::get('/home', 'HomeController@index')->name('dashboard');
+Route::get('/home/siparis/duzenle/{id}','HomeController@edit')->name('user.siparis.duzenle');
+Route::get('/home/siparis/sil/{id}','HomeController@sil')->name('user.siparis.sil');
+
+Route::get('change-password','HomeController@sifreform')->name('user.password');
+Route::post('change-password','HomeController@Showcphl');
+Route::get('change-email','HomeController@emailform')->name('user.email');
+Route::post('change-email','HomeController@mailsjsj')->name('emaildegistir');
+Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
+
+Route::get('login','Auth\LoginController@loginform')->name('login');
+
+Route::get('/login/{social}','Auth\LoginController@socialLogin')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
+Route::get('/login/{social}/callback','Auth\LoginController@handleProviderCallback')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
 Route::prefix('profile')->group(function () {
     Route::get('/', 'HomeController@profile')->name('profile');
     Route::post('/kaydet/{id?}', 'HomeController@profilesave')->name('user.profile.kaydet');
@@ -73,29 +76,7 @@ Route::group(['prefix' => 'user-order'], function ()
 
 });
 
-
-
-
 //------------------------------------------------------------------
-
-
-Route::get('change-password','HomeController@sifreform')->name('user.password');
-Route::post('change-password','HomeController@Showcphl');
-
-Route::get('change-email','HomeController@emailform')->name('user.email');
-Route::post('change-email','HomeController@mailsjsj')->name('emaildegistir');
-
-Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
-
-Route::get('/home', 'HomeController@index')->name('dashboard');
-Route::get('/home/siparis/duzenle/{id}','HomeController@edit')->name('user.siparis.duzenle');
-Route::get('/home/siparis/sil/{id}','HomeController@sil')->name('user.siparis.sil');
-
-Route::get('login','Auth\LoginController@loginform')->name('login');
-
-Route::get('/login/{social}','Auth\LoginController@socialLogin')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
-Route::get('/login/{social}/callback','Auth\LoginController@handleProviderCallback')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
-
 
 
 
@@ -276,16 +257,3 @@ Route::delete('/subscriber/{subscriber}','Admin\SubscriberController@destroy')->
 Route::get('denemexxx','DController@index');
 
 
-use App\Http\Controllers\HomeController;
-use Spatie\Sitemap\SitemapGenerator;
-
-
-
-Route::get('sitemap', function ()
-{
-    SitemapGenerator::create('http://www.rdglobal.com.tr')->writeToFile('sitemap.xml');
-
-    return 'sitemap created';
-});
-
-// Route::post('/admin/ayar/kategoriDuzenle','Admin\Ayar\kategoriDuzenle@post')->name('kategoriDuzenlePost');

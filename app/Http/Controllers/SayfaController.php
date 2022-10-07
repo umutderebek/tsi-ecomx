@@ -24,6 +24,8 @@ use Illuminate\Support\Facades\DB;
 
 class SayfaController extends Controller
 {
+
+
     public function index()
     {
         $temaayar = TemaSettings::all();
@@ -42,7 +44,7 @@ class SayfaController extends Controller
 
 
 
-    return view('frontend.sayfalar.en.anasayfa',compact('temaayar','haber','endustri','hizmet'));
+    return view('frontend.anasayfa',compact('temaayar','haber','endustri','hizmet'));
     }
 
     public function getHomeCats(){
@@ -68,7 +70,7 @@ class SayfaController extends Controller
         $ixtemaayar = ContactSettings::all();
         $temaayar = TemaSettings::all();
 
-        return view('frontend.sayfalar.en.iletisim',compact('ixtemaayar','temaayar'));
+        return view('frontend.contact',compact('ixtemaayar','temaayar'));
     }
 
     public function mail(Request $request)

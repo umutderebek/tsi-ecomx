@@ -80,8 +80,8 @@ class Handler extends ExceptionHandler
             case 'admin':
                 $login = 'admin.login';
                 break;
-            case 'ifu':
-                $login = 'ifu.login';
+            case 'user':
+                $login = 'user.login';
                 break;
 
             default:

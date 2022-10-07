@@ -1,3 +1,4 @@
+
 @extends('layouts.anasayfa')
 
 @section('aside-page-title','ABOUT US')

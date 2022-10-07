@@ -126,27 +126,4 @@ class TrpageController extends Controller
 
         return view('frontend.blog.bpost',compact('temaayar','kategoris','blog','popular','photos','endustri','hizmet'));
     }
-
-    public function endustripost($id)
-    {
-
-        $blog = Endustri::whereSlug($id)->firstOrFail();
-        $endustri = \App\Models\Endustri\Endustri::all();
-        $hizmet = Treatment::all();
-        $temaayar = TemaSettings::all();
-
-        return view('frontend.endustri.endustripost',compact('temaayar','blog','endustri','hizmet'));
-    }
-
-    public function hizmetpost($id)
-    {
-
-        $blog = Treatment::whereSlug($id)->firstOrFail();
-        $endustri = \App\Models\Endustri\Endustri::all();
-        $hizmet = Treatment::all();
-
-        $temaayar = TemaSettings::all();
-
-        return view('frontend.hizmet.bpost',compact('temaayar','blog','endustri','hizmet'));
-    }
 }
