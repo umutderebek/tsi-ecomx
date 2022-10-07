@@ -48,7 +48,7 @@ class AdminUrunKategoriController extends Controller
 
         toastr()->success('Veri Başariyla Eklendi :)');
 
-        return redirect()->route('admin.urunkategori.index');
+        return redirect()->route('admin.category.index');
     }
 
     public function edit($id)
@@ -97,6 +97,6 @@ class AdminUrunKategoriController extends Controller
         Kategori::destroy($id);
         toastr()->success('Veri Başarıyla Silindi :)');
 
-        return redirect()->route('admin.urunkategori.index');
+        return redirect()->route('admin.category.index');
     }
 }

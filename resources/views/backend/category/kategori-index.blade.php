@@ -1,7 +1,6 @@
 @extends('arka')
 
 @section('content')
-
     <div id="kt_app_content" class="app-content flex-column-fluid mt-5">
         <!--begin::Content container-->
         <div id="kt_app_content_container" class="app-container container-xxl">
@@ -49,26 +48,20 @@
                         </tr>
                         <!--end::Table row-->
                         </thead>
-                        <!--end::Table head-->
-                        <!--begin::Table body-->
                         @foreach($kats as $kat)
                         <tbody class="fw-semibold text-gray-600">
-                        <!--begin::Table row-->
                         <tr>
-                            <!--begin::Checkbox-->
-                            <!--end::Checkbox-->
-                            <!--begin::Category=-->
                             <td>{{$kat->id}}</td>
                             <td>
                                 <div class="d-flex">
                                     <!--begin::Thumbnail-->
-                                    <a href="../../demo1/dist/apps/ecommerce/catalog/edit-category.html" class="symbol symbol-50px">
-                                        <span class="symbol-label" style="background-image:url(assets/media//stock/ecommerce/68.gif);"></span>
+                                    <a href="{{route('admin.category.duzenle',$kat->id)}}" class="symbol symbol-50px">
+                                        <span class="symbol-label" style="background-image:url(/frontend/uploads/category/masalar/{{$kat->kategori_resmi}}"></span>
                                     </a>
                                     <!--end::Thumbnail-->
                                     <div class="ms-5">
                                         <!--begin::Title-->
-                                        <a href="../../demo1/dist/apps/ecommerce/catalog/edit-category.html" class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1" data-kt-ecommerce-category-filter="category_name">{{$kat->kategori_adi}}</a>
+                                        <a href="{{route('admin.category.duzenle',$kat->id)}}" class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1" data-kt-ecommerce-category-filter="category_name">{{$kat->kategori_adi}}</a>
                                         <!--end::Title-->
                                     </div>
                                 </div>

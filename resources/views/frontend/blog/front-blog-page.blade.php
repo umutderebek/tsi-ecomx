@@ -64,12 +64,9 @@
                     </div>
                 </article>
                 @endforeach
-
-
                 <ul class="custom-pagination-style-1 pagination pagination-rounded pagination-md justify-content-center">
                     {{ $blog->links() }}
                 </ul>
-
             </div>
             <div class="blog-sidebar col-lg-4 pt-4 pt-lg-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1800">
                 <aside class="sidebar">
