@@ -119,7 +119,7 @@
                                 <!--end::Card title-->
                                 <!--begin::Card toolbar-->
                                 <div class="card-toolbar">
-                                    <div class="rounded-circle bg-success w-15px h-15px" id="kt_ecommerce_add_category_status"></div>
+                                    <div class="rounded-circle {{ $kategori->yayin === 1 ? "bg-success" : "bg-danger"}} w-15px h-15px"></div>
                                 </div>
                                 <!--begin::Card toolbar-->
                             </div>
@@ -127,11 +127,10 @@
                             <!--begin::Card body-->
                             <div class="card-body pt-0">
                                 <!--begin::Select2-->
-                                <select class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_category_status_select">
+                                <select class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_category_status_select" name="status">
                                     <option></option>
-                                    <option value="published" selected="selected">Published</option>
-                                    <option value="scheduled">Scheduled</option>
-                                    <option value="unpublished">Unpublished</option>
+                                    <option value="published" {{ $kategori->yayin === 1 ? "selected" : ""}}>Published</option>
+                                    <option value="unpublished" {{ $kategori->yayin === 0 ? "selected" : ""}}>Unpublished</option>
                                 </select>
                                 <!--end::Select2-->
                                 <!--begin::Description-->
@@ -274,6 +273,8 @@
         <!--end::Content-->
     </div>
 </div>
+
+
 
 
 @endsection

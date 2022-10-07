@@ -287,3 +287,5 @@ Route::get('sitemap', function ()
 
     return 'sitemap created';
 });
+
+// Route::post('/admin/ayar/kategoriDuzenle','Admin\Ayar\kategoriDuzenle@post')->name('kategoriDuzenlePost');
