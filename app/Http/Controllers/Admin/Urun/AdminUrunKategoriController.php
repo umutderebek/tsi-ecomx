@@ -8,6 +8,7 @@ use App\Models\KategoriUrun\Urun;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class AdminUrunKategoriController extends Controller
 {
@@ -56,18 +57,32 @@ class AdminUrunKategoriController extends Controller
         $kategori = Kategori::find($id);
         $kategoriler = Kategori::all();
 
-        return view('backend.category.kategori-edit', compact('kategoriler', 'kategori'));
+        // $data = DB::table('kategori')->get()->where('id',$id);
+        return view('backend.category.kategori-edit', compact('kategori'));
 
     }
 
-    public function guncelle($id)
+    public function guncelle($id, Request $request)
     {
-        $data = request()->only('slug', 'üst_id', 'kategori_adi', 'kategori_page_title', 'kategori_anasayfatitle', 'productsView');
+        $data = request()->only('slug', 'üst_id', 'kategori_adi', 'kategori_page_title', 'kategori_anasayfatitle', 'productsView', 'status');
+
+        if($data["status"] === "published"){
+            $affected = DB::table('kategori')->where('id',$id)->update(['yayin' => 1]);
+            echo $affected;
+        }
+        else if($data["status"] === "unpublished"){
+            $affected = DB::table('kategori')->where('id',$id)->update(['yayin' => 0]);
+            echo $affected;
+        }
+        else{
+            die();
+        }
+
         $update = Kategori::where('id', $id)->firstorFail();
         $data['slug'] = str_slug(strip_tags(request('slug')));
         $update->update($data);
         if (!request()->hasFile('kategori_resmi')) {
-            return $this->succesRedirect("admin.urunkategori.index");
+            return $this->succesRedirect("admin.category.index");
         }
         $this->validate(request(), [
             'kategori_resmi' => 'image|mimes:jpg,png,jpeg,gif|max:2048'
@@ -81,7 +96,6 @@ class AdminUrunKategoriController extends Controller
             $update->update($data);
 
         }
-
 
         return $this->succesRedirect("admin.category.index");
     }
