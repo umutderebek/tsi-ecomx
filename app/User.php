@@ -45,4 +45,25 @@ class User extends Authenticatable
     {
         return $this->hasMany(Userorder::class,'user_id');
     }
+
+    public function bill()
+    {
+        return $this->hasOne('App\Models\Userbilling');
+    }
+
+    public function ship()
+    {
+        return $this->hasOne('App\Models\Usershipping');
+    }
+
+    public function userbilling()
+    {
+        return $this->belongsTo('App\Models\Userbilling','id');
+    }
+
+    public function usershipping()
+    {
+        return $this->belongsTo('App\Models\Usershipping','id');
+    }
+
 }

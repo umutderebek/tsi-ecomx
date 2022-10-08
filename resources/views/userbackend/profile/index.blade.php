@@ -1,5 +1,4 @@
-
-@extends('layouts.anasayfa')
+@extends('layouts.userbackend')
 
 @section('aside-page-title','USER PROFILE')
 
@@ -54,19 +53,12 @@
                         <div class="profile-image-inner-container bg-color-primary">
                             <img src="/frontend/uploads/profile/{{Auth::user()->urun_resmi}}">
                             <span class="profile-image-button bg-color-dark">
-											<i class="fas fa-camera text-light"></i>
+
 										</span>
                         </div>
                         {!! Form::file('urun_resmi', array('class' => 'form-control profile-image-input ')) !!}
                     </div>
                 </div>
-
-                <aside class="sidebar mt-2" id="sidebar">
-                    <ul class="nav nav-list flex-column mb-5">
-                        <li class="nav-item"><a class="nav-link text-3 text-dark active" href="#">Profilim</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('user.password')}}">Şifremi Değiştir </a></li>
-                    </ul>
-                </aside>
 
             </div>
             <div class="col-lg-9">
@@ -116,22 +108,6 @@
                         <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">İnternet Sitesi</label>
                         <div class="col-lg-9">
                             {!! Form::text('website',Auth::user()->website, ['class' => 'form-control text-3 h-auto py-2 ' ,'placeholder' => 'Website', ]) !!}
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Adres</label>
-                        <div class="col-lg-9">
-                            {!! Form::text('address',Auth::user()->address, ['class' => 'form-control text-3 h-auto py-2 ' ,'placeholder' => 'Address', ]) !!}
-
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2"></label>
-                        <div class="col-lg-6">
-                            {!! Form::text('country',Auth::user()->country, ['class' => 'form-control text-3 h-auto py-2 ' ,'placeholder' => 'Country', ]) !!}
-                        </div>
-                        <div class="col-lg-3">
-                            {!! Form::text('state',Auth::user()->state, ['class' => 'form-control text-3 h-auto py-2 ' ,'placeholder' => 'State', ]) !!}
                         </div>
                     </div>
                     <div class="form-group row">

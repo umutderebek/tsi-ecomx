@@ -76,6 +76,14 @@ Route::group(['prefix' => 'user-order'], function ()
 
 });
 
+
+Route::get('edit-shipping-address/{id?}','HomeController@shipping')->name('user.shipper');
+Route::post('edit-shipping-address/kaydet/{id?}','HomeController@shipkaydet')->name('user.shipper.kaydet');
+
+Route::get('edit-billing-address/{id?}','HomeController@billing')->name('user.billing');
+Route::post('edit-billing-address/kaydet/{id?}','HomeController@billkaydet')->name('user.billing.kaydet');
+
+
 //------------------------------------------------------------------
 
 

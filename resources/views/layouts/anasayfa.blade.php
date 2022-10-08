@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="/frontend/images/icons/favicon.png">
 
     @include('layouts.partials.head')
-
+    @yield('css')
 
 </head>
 
@@ -56,6 +56,8 @@
 
 <!-- Plugin JS File -->
 @include('layouts.partials.js')
+
+@yield('js')
 </body>
 
 </html>

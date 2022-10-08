@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Endustri\Endustri;
 use App\Models\Treatment\Treatment;
+use App\Models\Userbilling;
 use App\Orderfiles;
 use App\Tema\TemaSettings;
 use App\User;
 use App\Orderdosya;
 use App\Userorder;
-use Brian2694\Toastr\Facades\Toastr;
+use App\Usershipping;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -38,6 +39,8 @@ class HomeController extends Controller
         $userorder = Userorder::where('user_id',$user_id)->get();
         $hizmet = Treatment::all();
         $endustri = Endustri::all();
+
+
 
         $temaayar = TemaSettings::all();
         return view('home',compact('temaayar','userorder','hizmet','endustri'));
@@ -154,7 +157,7 @@ class HomeController extends Controller
 
         toastr()->success('Veri Başarıyla Güncellendi :)');
 
-        return redirect()->route('profile');
+        return redirect()->route('dashboard','#account-details');
 
     }
 
@@ -429,19 +432,73 @@ class HomeController extends Controller
 
     public function dosyadestroy($id)
     {
-
         Orderdosya::destroy($id);
-
         toastr()->success('Veri Başarıyla Silindi :)');
 
         return redirect()->back();
 
+    }
+
+    public function billing ($id)
+    {
+        $userdetay = Userbilling::where('id',$id)->firstOrFail();
+        $temaayar = TemaSettings::where('id',1)->get();
+        return view('userbackend.billing.index',compact('temaayar','userdetay'));
 
     }
 
-    public function deneme()
+
+    public function billkaydet(Request $request, $id)
     {
-        return "hayda";
+        $userdetay = Userbilling::find($id);
+        $userdetay->country = request('country');
+        $userdetay->name_surname = request('name_surname');
+        $userdetay->state = request('state');
+        $userdetay->adress = request('adress');
+        $userdetay->adress2 = request('adress2');
+        $userdetay->firm_name = request('firm_name');
+        $userdetay->country_firm = request('country_firm');
+        $userdetay->state_firm = request('state_firm');
+        $userdetay->taxno = request('taxno');
+        $userdetay->zipcode = request('zipcode');
+        $userdetay->update();
+
+        toastr()->success('Veri Başarıyla Güncellendi :)');
+
+        return redirect()->route('dashboard');
+    }
+
+
+    public function shipping ($id)
+    {
+
+        $usershipper = Usershipping::where('id',$id)->firstOrFail();
+        $temaayar = TemaSettings::where('id',1)->get();
+
+        return view('userbackend.shipping.index',compact('temaayar','usershipper'));
+    }
+
+    public function shipkaydet(Request $request, $id)
+    {
+        request()->validate([
+            'state' =>'required',
+            'country' =>'required',
+            'adress'=>'required',
+            'adress2'=>'required',
+            'zipcode'=>'required',
+        ]);
+        $userdetay = Usershipping::find($id);
+        $userdetay->state = request('state');
+        $userdetay->country = request('country');
+        $userdetay->adress = request('adress');
+        $userdetay->adress2 = request('adress2');
+        $userdetay->zipcode = request('zipcode');
+        $userdetay->update();
+
+        toastr()->success('Veri Başarıyla Güncellendi :)');
+
+        return redirect()->route('dashboard');
+
     }
 
 }
