@@ -21,6 +21,14 @@ Route::get('/haber-kategori/{id}','TrpageController@blogkat')->name('tr.bkategor
 Route::get('/haberler/{id}','TrpageController@post')->name('tr.sblog');
 
 
+//E Ticaret Linkler
+
+
+Route::get('/category/{slug}','Eticaret\KategoriController@index')->name('kategori');
+
+
+
+
 ////////////////////////////
 Route::get('contact-us','SayfaController@iletisim')->name('contact-us');
 Route::post('contact-us','SayfaController@mail')->name('contact.mail.store');
@@ -75,6 +83,14 @@ Route::group(['prefix' => 'user-order'], function ()
     Route::post('/orderguncelle/{id?}', 'HomeController@orderguncelle')->name('user.orderguncelle');
 
 });
+
+
+Route::get('edit-shipping-address/{id?}','HomeController@shipping')->name('user.shipper');
+Route::post('edit-shipping-address/kaydet/{id?}','HomeController@shipkaydet')->name('user.shipper.kaydet');
+
+Route::get('edit-billing-address/{id?}','HomeController@billing')->name('user.billing');
+Route::post('edit-billing-address/kaydet/{id?}','HomeController@billkaydet')->name('user.billing.kaydet');
+
 
 //------------------------------------------------------------------
 

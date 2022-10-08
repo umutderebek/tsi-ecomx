@@ -60,9 +60,6 @@ E')
                         <a href="#account-orders" class="nav-link">Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#account-downloads" class="nav-link">Downloads</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="#account-addresses" class="nav-link">Addresses</a>
                     </li>
                     <li class="nav-item">
@@ -72,7 +69,12 @@ E')
                         <a href="wishlist.html">Wishlist</a>
                     </li>
                     <li class="link-item">
-                        <a href="login.html">Logout</a>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </a>
+
                     </li>
                 </ul>
 
@@ -119,18 +121,7 @@ E')
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mb-4">
-                                <a href="#account-downloads" class="link-to-tab">
-                                    <div class="icon-box text-center">
-                                                <span class="icon-box-icon icon-download">
-                                                    <i class="w-icon-download"></i>
-                                                </span>
-                                        <div class="icon-box-content">
-                                            <p class="text-uppercase mb-0">Downloads</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+
                             <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mb-4">
                                 <a href="#account-addresses" class="link-to-tab">
                                     <div class="icon-box text-center">
@@ -168,7 +159,11 @@ E')
                                 </a>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6 mb-4">
-                                <a href="#">
+
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                                     <div class="icon-box text-center">
                                                 <span class="icon-box-icon icon-logout">
                                                     <i class="w-icon-logout"></i>
@@ -262,19 +257,6 @@ E')
                             Shop<i class="w-icon-long-arrow-right"></i></a>
                     </div>
 
-                    <div class="tab-pane" id="account-downloads">
-                        <div class="icon-box icon-box-side icon-box-light">
-                                    <span class="icon-box-icon icon-downloads mr-2">
-                                        <i class="w-icon-download"></i>
-                                    </span>
-                            <div class="icon-box-content">
-                                <h4 class="icon-box-title ls-normal">Downloads</h4>
-                            </div>
-                        </div>
-                        <p class="mb-4">No downloads available yet.</p>
-                        <a href="shop-banner-sidebar.html" class="btn btn-dark btn-rounded btn-icon-right">Go
-                            Shop<i class="w-icon-long-arrow-right"></i></a>
-                    </div>
 
                     <div class="tab-pane" id="account-addresses">
                         <div class="icon-box icon-box-side icon-box-light">
@@ -296,36 +278,67 @@ E')
                                             <tbody>
                                             <tr>
                                                 <th>Name:</th>
-                                                <td>John Doe</td>
+                                                <td>{{Auth::user()->bill->name_surname}}</td>
                                             </tr>
-                                            <tr>
-                                                <th>Company:</th>
-                                                <td>Conia</td>
-                                            </tr>
+
                                             <tr>
                                                 <th>Address:</th>
-                                                <td>Wall Street</td>
+                                                <td>{{Auth::user()->bill->adress}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Address 2:</th>
+                                                <td>{{Auth::user()->bill->adress2}}</td>
                                             </tr>
                                             <tr>
                                                 <th>City:</th>
-                                                <td>California</td>
+                                                <td>{{Auth::user()->bill->state}}</td>
                                             </tr>
                                             <tr>
                                                 <th>Country:</th>
-                                                <td>United States (US)</td>
+                                                <td>{{Auth::user()->bill->country}}</td>
                                             </tr>
-                                            <tr>
-                                                <th>Postcode:</th>
-                                                <td>92020</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Phone:</th>
-                                                <td>1112223334</td>
-                                            </tr>
+                                            @if(Auth::user()->bill->zipcode === null)
+                                            @else
+                                                <tr>
+                                                    <th>Postcode:</th>
+                                                    <td>{{Auth::user()->bill->zipcode}}</td>
+                                                </tr>
+                                            @endif
+
+
+                                            @if(Auth::user()->bill->firm_name === null)
+                                            @else
+                                                <tr>
+                                                    <th>Firm Name:</th>
+                                                    <td>{{Auth::user()->bill->firm_name}}</td>
+                                                </tr>
+                                            @endif
+
+                                            @if(Auth::user()->bill->taxno === null)
+                                            @else
+                                                <tr>
+                                                    <th>Tax No:</th>
+                                                    <td>{{Auth::user()->bill->taxno}}</td>
+                                                </tr>
+                                            @endif
+                                            @if(Auth::user()->bill->country_firm === null)
+                                            @else
+                                                <tr>
+                                                    <th>Firm Country:</th>
+                                                    <td>{{Auth::user()->bill->country_firm}}</td>
+                                                </tr>
+                                            @endif
+                                            @if(Auth::user()->bill->state_firm === null)
+                                            @else
+                                                <tr>
+                                                    <th>Firm State:</th>
+                                                    <td>{{Auth::user()->bill->state_firm}}</td>
+                                                </tr>
+                                            @endif
                                             </tbody>
                                         </table>
                                     </address>
-                                    <a href="#"
+                                    <a href="{{route('user.billing',Auth::user()->bill->id)}}"
                                        class="btn btn-link btn-underline btn-icon-right text-primary">Edit
                                         your billing address<i class="w-icon-long-arrow-right"></i></a>
                                 </div>
@@ -336,34 +349,46 @@ E')
                                     <address class="mb-4">
                                         <table class="address-table">
                                             <tbody>
-                                            <tr>
-                                                <th>Name:</th>
-                                                <td>John Doe</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Company:</th>
-                                                <td>Conia</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Address:</th>
-                                                <td>Wall Street</td>
-                                            </tr>
-                                            <tr>
-                                                <th>City:</th>
-                                                <td>California</td>
-                                            </tr>
+                                            @if(Auth::user()->ship->country === null)
+                                            @else
                                             <tr>
                                                 <th>Country:</th>
-                                                <td>United States (US)</td>
+                                                <td>{{Auth::user()->ship->country}}</td>
                                             </tr>
+                                            @endif
+                                            @if(Auth::user()->ship->state === null)
+                                            @else
                                             <tr>
-                                                <th>Postcode:</th>
-                                                <td>92020</td>
+                                                <th>State:</th>
+                                                <td>{{Auth::user()->ship->state}}</td>
                                             </tr>
+                                            @endif
+                                            @if(Auth::user()->ship->adress === null)
+                                            @else
+                                            <tr>
+                                                <th>Adress:</th>
+                                                <td>{{Auth::user()->ship->adress}}</td>
+                                            </tr>
+                                            @endif
+                                            @if(Auth::user()->ship->adress2 === null)
+                                            @else
+                                            <tr>
+                                                <th>Adress-2:</th>
+                                                <td>{{Auth::user()->ship->adress2}}</td>
+                                            </tr>
+                                            @endif
+                                            @if(Auth::user()->ship->zipcode === null)
+                                            @else
+                                            <tr>
+                                                <th>Zip Code-2:</th>
+                                                <td>{{Auth::user()->ship->zipcode}}</td>
+                                            </tr>
+                                            @endif
+
                                             </tbody>
                                         </table>
                                     </address>
-                                    <a href="#"
+                                    <a href="{{route('user.shipper',Auth::user()->ship->id)}}"
                                        class="btn btn-link btn-underline btn-icon-right text-primary">Edit your
                                         shipping address<i class="w-icon-long-arrow-right"></i></a>
                                 </div>
@@ -448,22 +473,6 @@ E')
                                             <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">İnternet Sitesi</label>
                                             <div class="col-lg-9">
                                                 {!! Form::text('website',Auth::user()->website, ['class' => 'form-control text-3 h-auto py-2 ' ,'placeholder' => 'Website', ]) !!}
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Adres</label>
-                                            <div class="col-lg-9">
-                                                {!! Form::text('address',Auth::user()->address, ['class' => 'form-control text-3 h-auto py-2 ' ,'placeholder' => 'Address', ]) !!}
-
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2"></label>
-                                            <div class="col-lg-6">
-                                                {!! Form::text('country',Auth::user()->country, ['class' => 'form-control text-3 h-auto py-2 ' ,'placeholder' => 'Country', ]) !!}
-                                            </div>
-                                            <div class="col-lg-3">
-                                                {!! Form::text('state',Auth::user()->state, ['class' => 'form-control text-3 h-auto py-2 ' ,'placeholder' => 'State', ]) !!}
                                             </div>
                                         </div>
                                         <div class="form-group row">

@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Endustri\Endustri;
+use App\Models\KategoriUrun\Kategori;
 use App\Models\Treatment\Treatment;
+use App\Models\Userbilling;
 use App\Orderfiles;
 use App\Tema\TemaSettings;
 use App\User;
 use App\Orderdosya;
 use App\Userorder;
-use Brian2694\Toastr\Facades\Toastr;
+use App\Usershipping;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -38,9 +40,11 @@ class HomeController extends Controller
         $userorder = Userorder::where('user_id',$user_id)->get();
         $hizmet = Treatment::all();
         $endustri = Endustri::all();
+        $kategoriler = Kategori::Where('üst_id','=',null)->where('anasayfacikar','=',1)->get();
+
 
         $temaayar = TemaSettings::all();
-        return view('home',compact('temaayar','userorder','hizmet','endustri'));
+        return view('home',compact('temaayar','userorder','hizmet','endustri','kategoriler'));
     }
 
     public function sil($id)
@@ -56,7 +60,8 @@ class HomeController extends Controller
         $temaayar = TemaSettings::all();
         $hizmet = Treatment::all();
         $endustri = Endustri::all();
-        return view('userbackend.orders.duzenle',compact('userorder','temaayar','hizmet','endustri'));
+        $kategoriler = Kategori::Where('üst_id','=',null)->where('anasayfacikar','=',1)->get();
+        return view('userbackend.orders.duzenle',compact('userorder','temaayar','hizmet','endustri','kategoriler'));
     }
 
 
@@ -74,10 +79,10 @@ class HomeController extends Controller
         $endustri = Endustri::all();
         $temaayar = TemaSettings::all();
 
+        $kategoriler = Kategori::Where('üst_id','=',null)->where('anasayfacikar','=',1)->get();
 
 
-
-        return view('userbackend.profile.index',compact('user','temaayar','hizmet','endustri'));
+        return view('userbackend.profile.index',compact('user','temaayar','hizmet','endustri','kategoriler'));
     }
 
     public function profilesave(Request $request)
@@ -154,7 +159,7 @@ class HomeController extends Controller
 
         toastr()->success('Veri Başarıyla Güncellendi :)');
 
-        return redirect()->route('profile');
+        return redirect()->route('dashboard','#account-details');
 
     }
 
@@ -241,31 +246,34 @@ class HomeController extends Controller
 
     public function createStep1(Request $request)
     {
+        $kategoriler = Kategori::Where('üst_id','=',null)->where('anasayfacikar','=',1)->get();
         $userorder = $request->session()->get('userorder');
         $temaayar = TemaSettings::all();
         $hizmet = Treatment::all();
         $endustri = Endustri::all();
-        return view('userbackend.orders.useroderstep1',compact('userorder','temaayar','hizmet','endustri'));
+        return view('userbackend.orders.useroderstep1',compact('userorder','temaayar','hizmet','endustri','kategoriler'));
     }
 
     public function createStep2(Request $request)
     {
+        $kategoriler = Kategori::Where('üst_id','=',null)->where('anasayfacikar','=',1)->get();
         $hizmet = Treatment::all();
         $endustri = Endustri::all();
         $userorder = $request->session()->get('userorder');
 
         $temaayar = TemaSettings::all();
-        return view('userbackend.orders.useroderstep2',compact('userorder','temaayar','hizmet','endustri'));
+        return view('userbackend.orders.useroderstep2',compact('userorder','temaayar','hizmet','endustri','kategoriler'));
     }
 
     public function createStep3(Request $request)
     {
+        $kategoriler = Kategori::Where('üst_id','=',null)->where('anasayfacikar','=',1)->get();
         $userorder = Userorder::latest()->first();
         $hizmet = Treatment::all();
         $endustri = Endustri::all();
 
         $temaayar = TemaSettings::all();
-        return view('userbackend.orders.useroderstep3',compact('temaayar','userorder','hizmet','endustri'));
+        return view('userbackend.orders.useroderstep3',compact('temaayar','userorder','hizmet','endustri','kategoriler'));
     }
 
     public function postCreateStep1(Request $request)
@@ -412,7 +420,7 @@ class HomeController extends Controller
 
     public function createorder($id)
     {
-
+        $kategoriler = Kategori::Where('üst_id','=',null)->where('anasayfacikar','=',1)->get();
         $hizmet = Treatment::all();
         $endustri = Endustri::all();
         $photos = Orderdosya::where('order_id',$id)->get();
@@ -423,25 +431,80 @@ class HomeController extends Controller
 
         $temaayar = TemaSettings::all();
 
-        return view('userbackend.orders.index',compact('temaayar','user','photos','userorder','hizmet','endustri'));
+        return view('userbackend.orders.index',compact('temaayar','user','photos','userorder','hizmet','endustri','kategoriler'));
     }
 
 
     public function dosyadestroy($id)
     {
-
         Orderdosya::destroy($id);
-
         toastr()->success('Veri Başarıyla Silindi :)');
 
         return redirect()->back();
 
+    }
+
+    public function billing ($id)
+    {
+        $userdetay = Userbilling::where('id',$id)->firstOrFail();
+        $kategoriler = Kategori::Where('üst_id','=',null)->where('anasayfacikar','=',1)->get();
+        $temaayar = TemaSettings::where('id',1)->get();
+        return view('userbackend.billing.index',compact('temaayar','userdetay','kategoriler'));
 
     }
 
-    public function deneme()
+
+    public function billkaydet(Request $request, $id)
     {
-        return "hayda";
+        $userdetay = Userbilling::find($id);
+        $userdetay->country = request('country');
+        $userdetay->name_surname = request('name_surname');
+        $userdetay->state = request('state');
+        $userdetay->adress = request('adress');
+        $userdetay->adress2 = request('adress2');
+        $userdetay->firm_name = request('firm_name');
+        $userdetay->country_firm = request('country_firm');
+        $userdetay->state_firm = request('state_firm');
+        $userdetay->taxno = request('taxno');
+        $userdetay->zipcode = request('zipcode');
+        $userdetay->update();
+
+        toastr()->success('Veri Başarıyla Güncellendi :)');
+
+        return redirect()->route('dashboard');
+    }
+
+
+    public function shipping ($id)
+    {
+        $kategoriler = Kategori::Where('üst_id','=',null)->where('anasayfacikar','=',1)->get();
+        $usershipper = Usershipping::where('id',$id)->firstOrFail();
+        $temaayar = TemaSettings::where('id',1)->get();
+
+        return view('userbackend.shipping.index',compact('temaayar','usershipper','kategoriler'));
+    }
+
+    public function shipkaydet(Request $request, $id)
+    {
+        request()->validate([
+            'state' =>'required',
+            'country' =>'required',
+            'adress'=>'required',
+            'adress2'=>'required',
+            'zipcode'=>'required',
+        ]);
+        $userdetay = Usershipping::find($id);
+        $userdetay->state = request('state');
+        $userdetay->country = request('country');
+        $userdetay->adress = request('adress');
+        $userdetay->adress2 = request('adress2');
+        $userdetay->zipcode = request('zipcode');
+        $userdetay->update();
+
+        toastr()->success('Veri Başarıyla Güncellendi :)');
+
+        return redirect()->route('dashboard');
+
     }
 
 }

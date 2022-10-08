@@ -25,6 +25,8 @@
 
     @include('layouts.partials.slider')
 
+
+
     <div class="container">
         <div class="swiper-container appear-animate icon-box-wrapper br-sm mt-6 mb-6" data-swiper-options="{
                     'slidesPerView': 1,
