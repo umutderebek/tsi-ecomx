@@ -31,5 +31,6 @@
 
 <!-- Default CSS -->
 <link rel="stylesheet" type="text/css" href="/frontend/css/demo2.min.css">
+<link rel="stylesheet" type="text/css" href="/frontend/css/demo1.min.css">
 
 

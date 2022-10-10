@@ -166,7 +166,7 @@ return [
         Yajra\DataTables\DataTablesServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        Darryldecode\Cart\CartServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -235,7 +235,7 @@ return [
         'Charts' => ConsoleTVs\Charts\Classes\Chartjs\Chart::class,
         'Input' => Illuminate\Support\Facades\Request::class,
 	    'DataTables' => Yajra\DataTables\Facades\DataTables::class,
-        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
 
