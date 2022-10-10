@@ -54,9 +54,7 @@
                             <div class="widget widget-collapsible">
                                 <h3 class="widget-title"><span>All Subcategories</span></h3>
                                 <ul class="widget-body filter-items search-ul">
-                                    @foreach($altkat as $kat)
-                                    <li><a href="#"></a>{{$kat->kategori_adi}}</li>
-                                    @endforeach
+
                                 </ul>
                             </div>
                             <!-- End of Collapsible Widget -->

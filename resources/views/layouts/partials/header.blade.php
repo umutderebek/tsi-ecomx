@@ -153,85 +153,34 @@
             <div class="inner-wrap">
                 <div class="header-left">
                     <nav class="main-nav">
-                        <ul class="menu active-underline">
-                            <li>
-                                <a href="elements.html">Kategori Başlık</a>
-                                <ul class="header-menu-categories">
-                                    <li class="header-menu-category-links">
-                                        <a href="#">
-                                            <div class="category-image-div">
-                                                <img
-                                                    src="https://www.tischkoenig.com.tr/media/wysiwyg/kategori/masa/katlanir-masa.png">
-                                            </div>
-                                            <div class="category-name">Katlanır Masalar</div>
-                                        </a>
-                                    </li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="elements.html">Kategori Başlık</a>
-                                <ul class="header-menu-categories">
-                                    <li class="header-menu-category-links">
-                                        <a href="#">
-                                            <div class="category-image-div">
-                                                <img
-                                                    src="https://www.tischkoenig.com.tr/media/wysiwyg/kategori/masa/katlanir-masa.png">
-                                            </div>
-                                            <div class="category-name">Katlanır Masalar</div>
-                                        </a>
-                                    </li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="elements.html">Kategori Başlık</a>
-                                <ul class="header-menu-categories">
-                                    <li class="header-menu-category-links">
-                                        <a href="#">
-                                            <div class="category-image-div">
-                                                <img
-                                                    src="https://www.tischkoenig.com.tr/media/wysiwyg/kategori/masa/katlanir-masa.png">
-                                            </div>
-                                            <div class="category-name">Katlanır Masalar</div>
-                                        </a>
-                                    </li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="elements.html">Kategori Başlık</a>
-                                <ul class="header-menu-categories">
-                                    <li class="header-menu-category-links">
-                                        <a href="#">
-                                            <div class="category-image-div">
-                                                <img
-                                                    src="https://www.tischkoenig.com.tr/media/wysiwyg/kategori/masa/katlanir-masa.png">
-                                            </div>
-                                            <div class="category-name">Katlanır Masalar</div>
-                                        </a>
-                                    </li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                    <li class="header-menu-category-links"></li>
-                                </ul>
-                            </li>
+                        <ul class="menu ">
+                            @foreach($kategoriler as $category)
+                                <li>
+                                    <a href=""> {{$category->kategori_adi}}</a>
+                                    <ul class="header-menu-categories">
+                                        @if ($category->children)
+                                            @foreach($category->children as $child)
+
+                                                <li class="header-menu-category-links">
+                                                    <a href="#">
+                                                        <div class="category-image-div">
+                                                            <img
+                                                                src="https://www.tischkoenig.com.tr/media/wysiwyg/kategori/masa/katlanir-masa.png">
+                                                        </div>
+                                                        <div class="category-name">{{$child->kategori_adi}}</div>
+                                                    </a>
+                                                </li>
+                                            @endforeach
+                                        @endif
+
+
+                                    </ul>
+                                </li>
+
+                            @endforeach
+
+
+
                         </ul>
                     </nav>
                 </div>
@@ -241,7 +190,7 @@
                             aria-haspopup="true" aria-expanded="true" data-display="static"
                             title="Browse Categories">
                             <i class="w-icon-category"></i>
-                            <span>Bize Ulaşın</span>
+                            <span>SUPPORT CENTER</span>
                         </a>
 
                         <div class="dropdown-box">

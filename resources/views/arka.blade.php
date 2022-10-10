@@ -14,6 +14,7 @@
     <meta property="og:url" content="https://keenthemes.com/metronic" />
     <meta property="og:site_name" content="Keenthemes | Metronic" />
     @include('backend-layouts.head')
+    @toastr_css
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -56,6 +57,10 @@
 @include('backend-layouts.script')
 
 @yield('js')
+
+@jquery
+@toastr_js
+@toastr_render
 <!--end::Custom Javascript-->
 <!--end::Javascript-->
 </body>

@@ -11,6 +11,9 @@
 |
 */
 
+use App\Http\Controllers\HomeController;
+
+
 Auth::routes();
 
 
@@ -236,6 +239,7 @@ Route::group(['prefix' => 'Admin-urun'], function ()
     Route::post('/ara','Admin\Urun\AdminUrunController@ara')->name('admin.urun.ara');
     Route::get('/sil/{id}','Admin\Urun\AdminUrunController@sil')->name('admin.urun.sil');
 });
+
 Route::group(['prefix' => 'Admin-category'], function ()
 {
     Route::match(['get','post'],'/','Admin\Urun\AdminUrunKategoriController@index')->name('admin.category.index');
@@ -244,6 +248,17 @@ Route::group(['prefix' => 'Admin-category'], function ()
     Route::post('/kaydet/{id?}','Admin\Urun\AdminUrunKategoriController@kaydet')->name('admin.category.kaydet');
     Route::post('/guncelle/{id?}','Admin\Urun\AdminUrunKategoriController@guncelle')->name('admin.category.guncelle');
     Route::get('/sil/{id}','Admin\Urun\AdminUrunKategoriController@sil')->name('admin.category.sil');
+
+});
+
+Route::group(['prefix' => 'Admin-attributes'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@index')->name('admin.attribute.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@form')->name('admin.attribute.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@edit')->name('admin.attribute.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@kaydet')->name('admin.attribute.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@guncelle')->name('admin.attribute.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@sil')->name('admin.attribute.sil');
 
 });
 
@@ -272,4 +287,6 @@ Route::delete('/subscriber/{subscriber}','Admin\SubscriberController@destroy')->
 
 Route::get('denemexxx','DController@index');
 
+Route::get('item', [HomeController::class, 'item']);
+Route::post('item', [HomeController::class, 'storeitem'])->name('itempost');
 

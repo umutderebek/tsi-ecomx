@@ -97,6 +97,8 @@ class AdminUrunKategoriController extends Controller
 
         }
 
+
+
         return $this->succesRedirect("admin.category.index");
     }
 

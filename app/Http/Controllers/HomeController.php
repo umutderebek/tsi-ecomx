@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Endustri\Endustri;
+use App\Models\Item;
 use App\Models\KategoriUrun\Kategori;
 use App\Models\Treatment\Treatment;
 use App\Models\Userbilling;
@@ -29,6 +30,9 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+
+
+
     /**
      * Show the application dashboard.
      *
@@ -40,7 +44,8 @@ class HomeController extends Controller
         $userorder = Userorder::where('user_id',$user_id)->get();
         $hizmet = Treatment::all();
         $endustri = Endustri::all();
-        $kategoriler = Kategori::Where('üst_id','=',null)->where('anasayfacikar','=',1)->get();
+
+        $kategoriler = Kategori::with('children')->whereNull('üst_id')->get();
 
 
         $temaayar = TemaSettings::all();
