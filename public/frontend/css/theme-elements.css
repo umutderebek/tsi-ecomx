@@ -1,0 +1,516 @@
+
+/* Forms */
+form label {
+    font-weight: normal;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select {
+    border: 1px solid #E5E7E9;
+    border-radius: 6px;
+    outline: none;
+}
+
+.label {
+    font-weight: normal;
+}
+
+label.required:after {
+    content: "*";
+    font-size: 0.8em;
+    margin: 0.3em;
+    position: relative;
+    top: -2px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+}
+
+.form-group:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.form-control {
+    border-color: rgba(0, 0, 0, 0.09);
+}
+
+
+
+.form-control.form-control-focused {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-color: #CCC;
+}
+
+.form-control:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-color: #CCC;
+}
+
+.form-control.error {
+    border-color: #a94442;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.form-control.error:focus {
+    border-color: #843534;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+
+.form-select.form-select-icon-light {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>");
+}
+
+.form-switch.form-switch-sm {
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.form-switch.form-switch-sm .form-check-input {
+    height: 16px;
+    height: 1rem;
+    width: calc(1rem + 0.75rem);
+    border-radius: 2rem;
+}
+
+.form-switch.form-switch-md {
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+}
+
+.form-switch.form-switch-md .form-check-input {
+    height: 24px;
+    height: 1.5rem;
+    width: calc(2rem + 0.75rem);
+    border-radius: 3rem;
+}
+
+.form-switch.form-switch-lg {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+
+.form-switch.form-switch-lg .form-check-input {
+    height: 32px;
+    height: 2rem;
+    width: calc(3rem + 0.75rem);
+    border-radius: 4rem;
+}
+
+.form-switch.form-switch-xl {
+    margin-bottom: 32px;
+    margin-bottom: 2rem;
+}
+
+.form-switch.form-switch-xl .form-check-input {
+    height: 40px;
+    height: 2.5rem;
+    width: calc(4rem + 0.75rem);
+    border-radius: 5rem;
+}
+
+.form-switch .form-check-input {
+    box-shadow: none !important;
+}
+
+.form-switch .form-check-input:focus {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba%280, 0, 0, 0.25%29'/></svg>") !important;
+}
+
+.form-switch .form-check-input:checked {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='white'/></svg>") !important;
+}
+
+.page-link {
+    border-color: rgba(0, 0, 0, 0.06);
+}
+
+.input-group .form-control {
+    height: auto;
+}
+
+.input-group-rounded .form-control {
+    border-radius: 2rem 0rem 0rem 2rem;
+    border: 0;
+    padding-left: 16px;
+    padding-left: 1rem;
+}
+
+.input-group-rounded .btn {
+    border-color: rgba(0, 0, 0, 0.09);
+    border-radius: 0rem 2rem 2rem 0rem;
+    font-size: 11.2px;
+    font-size: 0.7rem;
+    padding: 13.92px;
+    padding: 0.87rem;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    z-index: 3;
+}
+
+/* Form - iOS Override */
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+textarea {
+    -webkit-appearance: none;
+}
+
+.form-control::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder,
+input[type="datetime"]::-webkit-input-placeholder,
+input[type="datetime-local"]::-webkit-input-placeholder,
+input[type="date"]::-webkit-input-placeholder,
+input[type="month"]::-webkit-input-placeholder,
+input[type="time"]::-webkit-input-placeholder,
+input[type="week"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="url"]::-webkit-input-placeholder,
+input[type="search"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="color"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #bdbdbd;
+}
+
+.form-control::-moz-placeholder,
+input[type="text"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder,
+input[type="datetime"]::-moz-placeholder,
+input[type="datetime-local"]::-moz-placeholder,
+input[type="date"]::-moz-placeholder,
+input[type="month"]::-moz-placeholder,
+input[type="time"]::-moz-placeholder,
+input[type="week"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="url"]::-moz-placeholder,
+input[type="search"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder,
+input[type="color"]::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #bdbdbd;
+}
+
+.form-control:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+input[type="datetime"]:-ms-input-placeholder,
+input[type="datetime-local"]:-ms-input-placeholder,
+input[type="date"]:-ms-input-placeholder,
+input[type="month"]:-ms-input-placeholder,
+input[type="time"]:-ms-input-placeholder,
+input[type="week"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="url"]:-ms-input-placeholder,
+input[type="search"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="color"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #bdbdbd;
+}
+
+/* Placeholder Light */
+.form-placeholders-light .form-control::-webkit-input-placeholder,
+.form-placeholders-light input[type="text"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="password"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="datetime"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="datetime-local"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="date"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="month"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="time"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="week"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="number"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="email"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="url"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="search"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="tel"]::-webkit-input-placeholder,
+.form-placeholders-light input[type="color"]::-webkit-input-placeholder,
+.form-placeholders-light textarea::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+.form-placeholders-light .form-control::-moz-placeholder,
+.form-placeholders-light input[type="text"]::-moz-placeholder,
+.form-placeholders-light input[type="password"]::-moz-placeholder,
+.form-placeholders-light input[type="datetime"]::-moz-placeholder,
+.form-placeholders-light input[type="datetime-local"]::-moz-placeholder,
+.form-placeholders-light input[type="date"]::-moz-placeholder,
+.form-placeholders-light input[type="month"]::-moz-placeholder,
+.form-placeholders-light input[type="time"]::-moz-placeholder,
+.form-placeholders-light input[type="week"]::-moz-placeholder,
+.form-placeholders-light input[type="number"]::-moz-placeholder,
+.form-placeholders-light input[type="email"]::-moz-placeholder,
+.form-placeholders-light input[type="url"]::-moz-placeholder,
+.form-placeholders-light input[type="search"]::-moz-placeholder,
+.form-placeholders-light input[type="tel"]::-moz-placeholder,
+.form-placeholders-light input[type="color"]::-moz-placeholder,
+.form-placeholders-light textarea::-moz-placeholder {
+    color: #FFF;
+}
+
+.form-placeholders-light .form-control:-ms-input-placeholder,
+.form-placeholders-light input[type="text"]:-ms-input-placeholder,
+.form-placeholders-light input[type="password"]:-ms-input-placeholder,
+.form-placeholders-light input[type="datetime"]:-ms-input-placeholder,
+.form-placeholders-light input[type="datetime-local"]:-ms-input-placeholder,
+.form-placeholders-light input[type="date"]:-ms-input-placeholder,
+.form-placeholders-light input[type="month"]:-ms-input-placeholder,
+.form-placeholders-light input[type="time"]:-ms-input-placeholder,
+.form-placeholders-light input[type="week"]:-ms-input-placeholder,
+.form-placeholders-light input[type="number"]:-ms-input-placeholder,
+.form-placeholders-light input[type="email"]:-ms-input-placeholder,
+.form-placeholders-light input[type="url"]:-ms-input-placeholder,
+.form-placeholders-light input[type="search"]:-ms-input-placeholder,
+.form-placeholders-light input[type="tel"]:-ms-input-placeholder,
+.form-placeholders-light input[type="color"]:-ms-input-placeholder,
+.form-placeholders-light textarea:-ms-input-placeholder {
+    color: #FFF;
+}
+
+/* Form - Bootstrap Override */
+.btn-lg,
+.btn-group-lg > .btn {
+    line-height: 1.334;
+}
+
+.input-group-btn .btn {
+    padding-top: 8px;
+    padding-top: 0.5rem;
+    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
+}
+
+select.form-control-sm, select.form-control-lg {
+    line-height: 1;
+    height: auto !important;
+}
+
+.custom-select-1 {
+    position: relative;
+}
+
+.custom-select-1 select {
+    line-height: 1;
+    font-size: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.custom-select-1 select::-ms-expand {
+    display: none;
+}
+
+.custom-select-1.custom-select-1-icon-light select {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>");
+}
+
+/* Custom Checkbox */
+.custom-checkbox-1 {
+    position: relative;
+    padding: 0 0 0 25px;
+    margin-bottom: 7px;
+    margin-top: 0;
+}
+
+.custom-checkbox-1.form-check .form-check-input {
+    margin-left: 0;
+}
+
+.custom-checkbox-1.form-check .form-check-label {
+    padding-left: 0;
+}
+
+.custom-checkbox-1.checkbox-inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.form-group .custom-checkbox-1.checkbox-inline {
+    margin-top: 7px;
+    padding-top: 0;
+}
+
+.custom-checkbox-1:last-child, .custom-checkbox-1:last-of-type {
+    margin-bottom: 0;
+}
+
+.custom-checkbox-1 input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    margin: -6px 0 0 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.custom-checkbox-1 input[type="checkbox"]:checked + label:after {
+    position: absolute;
+    display: inline-block;
+    font-family: 'Font Awesome 6 Free';
+    content: '\F00C';
+    top: 50%;
+    left: 4px;
+    margin-top: -5px;
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+    width: 16px;
+    height: 16px;
+    color: #333;
+}
+
+.custom-checkbox-1 input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+}
+
+.custom-checkbox-1 input[type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+}
+
+.custom-checkbox-1 input[type="checkbox"]:disabled + label {
+    cursor: not-allowed;
+}
+
+.custom-checkbox-1 input[type="checkbox"]:disabled + label:before {
+    background-color: #eee;
+}
+
+.custom-checkbox-1 label {
+    cursor: pointer;
+    margin-bottom: 0;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.custom-checkbox-1 label:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -9px;
+    width: 19px;
+    height: 18px;
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid #dadada;
+    background-color: #fff;
+}
+
+.custom-checkbox-1 label + label.error {
+    display: block;
+}
+
+.custom-checkbox-1.checkbox-custom-transparent label:before {
+    background-color: transparent;
+}
+
+.custom-checkbox-1.checkbox-custom-transparent input[type="checkbox"]:checked + label:after {
+    color: #FFF;
+}
+
+.custom-checkbox-1.checkbox-custom-transparent input[type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+}
+
+/* Custom Checkbox Switch */
+.custom-checkbox-switch {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    width: 50px;
+    height: 26px;
+    background-color: #CCC;
+    border: 1px solid #D9DADC;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: ease all 300ms;
+}
+
+.custom-checkbox-switch:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    width: 15px;
+    height: 15px;
+    background-color: #FFF;
+    border-radius: 50%;
+    transform: translate3d(0, -50%, 0);
+    transition: ease left 300ms;
+}
+
+.custom-checkbox-switch:checked {
+    border-color: #CCC;
+}
+
+.custom-checkbox-switch:checked:after {
+    left: 27px;
+}
+
+.bootstrap-timepicker-widget input {
+    border: 0;
+}
+
+.bootstrap-timepicker-widget table td input {
+    width: 40px;
+}
+
+.fileupload .btn {
+    line-height: 20px;
+    margin-left: -5px;
+}
+
+/* Forms Validations */
+label.valid {
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+label.error {
+    color: #c10000;
+    font-size: 0.9em;
+    line-height: 18px;
+    padding: 5px 0 0;
+}
+
+label.error#captcha-error {
+    margin-top: 15px;
+}
+
+.form-errors-light .form-control.error {
+    border-color: #FFF;
+}
+
+.form-errors-light label.error {
+    color: #FFF;
+}

@@ -3,22 +3,22 @@
 * Copyright (c) 2016 Dmitry Semenov; */
 ; (function (factory) {
 	if (typeof define === 'function' && define.amd) {
-		// AMD. Register as an anonymous module.
+		// AMD. Register as an anonymous module. 
 		define(['jquery'], factory);
 	} else if (typeof exports === 'object') {
-		// Node/CommonJS
+		// Node/CommonJS 
 		factory(require('jquery'));
 	} else {
-		// Browser globals
+		// Browser globals 
 		factory(window.jQuery || window.Zepto);
 	}
 }(function ($) {
 
 	/*>>core*/
 	/**
-	 *
+	 * 
 	 * Magnific Popup Core JS file
-	 *
+	 * 
 	 */
 
 
@@ -40,7 +40,7 @@
 
 
 	/**
-	 * Private vars
+	 * Private vars 
 	 */
 	/*jshint -W079 */
 	var mfp, // As we have only one instance of MagnificPopup object, we define it locally to not to use 'this'
@@ -131,7 +131,7 @@
 		constructor: MagnificPopup,
 
 		/**
-		 * Initializes Magnific Popup plugin.
+		 * Initializes Magnific Popup plugin. 
 		 * This function is triggered only once when $.fn.magnificPopup or $.magnificPopup is executed
 		 */
 		init: function () {
@@ -1517,9 +1517,9 @@
 
 
 				/*
-
+	
 				Animating left + top + width/height looks glitchy in Firefox, but perfect in Chrome. And vice-versa.
-
+	
 				 */
 				var obj = {
 					width: el.width(),

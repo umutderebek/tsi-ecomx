@@ -61,7 +61,7 @@
         position: relative;
         flex: 0 0 15.8rem;
         max-width: 15.8rem;
-
+        
         &:not(:first-child) {
             margin-#{$left}: 3rem;
             .product-media {
@@ -333,7 +333,7 @@
         margin-#{$left}: 1.8rem;
         p {
             font-size: 1.4rem;
-            line-height: 1.4;
+            line-height: 1.4; 
         }
         .ratings-container {
             margin-bottom: .3rem;
@@ -504,7 +504,7 @@ aside {
     }
 }
 
-// Product Sticky Both Content
+// Product Sticky Both Content 
 @include mq(lg) {
     .sticky-both-content {
         .product-details-1 {
@@ -516,7 +516,7 @@ aside {
 // Hotspot
 .hotspot-banner {
     overflow: visible;
-}
+}   
 
 .hotspot-product {
     display: flex;
@@ -568,7 +568,7 @@ aside {
         #{$left}: 71.1%;
         top: 36.1%;
     }
-}
+}   
 
 .hotspot-right {
     .product {
@@ -671,5 +671,5 @@ aside {
     //             display: none;
     //         }
     //     }
-    // }
+    // }        
 }

@@ -6,7 +6,7 @@
         - Rounded
 --------------------------------------*/
 
-// Button
+// Button 
 .btn {
     display: inline-block;
     border: 2px solid #eeeeee;
@@ -33,7 +33,7 @@
     &:focus {
         color: #666;
         border-color:   darken( #eee , 7% );
-        background-color: darken( #eee , 7% );
+        background-color: darken( #eee , 7% );  
     }
 }
 

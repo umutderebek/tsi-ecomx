@@ -238,7 +238,7 @@
             animation: slideX 60s infinite linear 1s;
             display: inline-block;
         }
-
+        
     }
     .btn {
         padding-#{$left}: 1.9em;
@@ -272,9 +272,9 @@
         font-size: 1.6rem;
         line-height: 1;
     }
-    p {
+    p { 
         font-size: 1.3rem;
-        line-height: 1;
+        line-height: 1; 
     }
     .input-wrapper {
         display: flex;
@@ -304,7 +304,7 @@
         .content-left {
             margin-#{$right}: 0;
         }
-    }
+    }    
 }
 
 @include mq(md, max) {

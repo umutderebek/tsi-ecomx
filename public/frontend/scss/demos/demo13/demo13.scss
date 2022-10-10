@@ -20,7 +20,7 @@ $second-font-family: "Segoe Script";
 /* 3. mixins */
 @import '../../mixins/breakpoint';
 @import '../../mixins/core';
-@import '../../mixins/buttons';
+@import '../../mixins/buttons'; 
 @import '../../mixins/direction';
 
 @import 'demo13_config';
@@ -67,7 +67,7 @@ $second-font-family: "Segoe Script";
 @import '../../pages/compare';
 @import '../../pages/shop';
 
-/* 7. header */
+/* 7. header */ 
 @import '../../base/header/header';
 @import '../../base/header/dropdown';
 @import '../../base/header/menu';

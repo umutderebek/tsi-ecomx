@@ -16,10 +16,10 @@ $dir: rtl;
 $secondary-color: #f77c29;
 /* 2. config */
 @import '../../config/variables';
-/* 3. mixins */
+/* 3. mixins */ 
 @import '../../mixins/breakpoint';
 @import '../../mixins/core';
-@import '../../mixins/buttons';
+@import '../../mixins/buttons'; 
 @import '../../mixins/direction';
 
 @import 'demo_rtl_config';

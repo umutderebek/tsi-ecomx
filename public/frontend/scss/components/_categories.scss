@@ -116,7 +116,7 @@
             visibility: visible;
         }
     }
-
+    
 }
 
 // Categoty-default1
@@ -258,7 +258,7 @@
             top: 50%;
             transform: translate( if-ltr(-50%,50%), -50% );
         }
-    }
+    } 
 }
 
 // Icon Category
@@ -315,7 +315,7 @@
     }
 }
 
-// Category with Content positioned center
+// Category with Content positioned center 
 .category-center {
     .category-content {
         position: absolute;

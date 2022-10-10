@@ -142,12 +142,12 @@
         letter-spacing: -.025em;
         padding: 1.1rem 0 .3rem;
     }
-    .custom-radio {
+    .custom-radio { 
         line-height: 2.7;
-        label {
+        label { 
             letter-spacing: 0;
-            padding-#{$left}: 2.5rem;
-        }
+            padding-#{$left}: 2.5rem; 
+        } 
         .custom-control-label::after {
             color: #ccc;
             padding-top: 1px;
@@ -190,7 +190,7 @@
         color: #999;
     }
     label {
-        color: #333;
+        color: #333;        
         text-transform: uppercase;
     }
 }
@@ -235,7 +235,7 @@
 @include mq('md', 'max') {
     .cart-table {
         td.product-subtotal {
-            text-align: center;
+            text-align: center; 
         }
         &.shop-table .product-quantity {
             width: auto;

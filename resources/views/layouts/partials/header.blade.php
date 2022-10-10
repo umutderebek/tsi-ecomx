@@ -48,7 +48,7 @@
             <div class="header-left mr-md-4">
                 <a href="#" class="mobile-menu-toggle  w-icon-hamburger" aria-label="menu-toggle">
                 </a>
-                <a href="" class="logo ml-lg-0">
+                <a href="/" class="logo ml-lg-0">
                     <img src="/frontend/images/tischkonig-logo-ve-slogan_1.svg" alt="logo" width="144" height="45" />
                 </a>
                 <form method="get" action="#"

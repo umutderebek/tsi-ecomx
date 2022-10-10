@@ -12,7 +12,7 @@
             - MobileMenu
             - MobileMenuOverlay
             - MobileMenuCloseButtonn
-
+        
         - Vertical Menu
         - Category Menu
 -----------------------------------------*/
@@ -362,7 +362,7 @@
         color: $body-color;
         padding: 0;
         letter-spacing: 0;
-
+        
         &:last-child {
             margin-bottom: 1rem;
         }
@@ -584,7 +584,7 @@
             width: 50%;
         }
     }
-
+    
     .nav-link {
         margin-bottom: -2px;
         padding: 1rem;
@@ -665,7 +665,7 @@
             vertical-align: middle;
         }
         // List Padding
-        li {
+        li { 
             a {
                 padding-#{$left}: 2.4rem;
             }
@@ -728,7 +728,7 @@
         // if page wrapper has margin-#{$left}, then recalculate it's movement
         margin-#{$left}: #{get( mobile-menu, container, max-width )};
         margin-#{$right}: -#{
-            get( mobile-menu, container, max-width ) -
+            get( mobile-menu, container, max-width ) - 
             if( get( base, page-wrapper, margin-#{$left} ), get( base, page-wrapper, margin-#{$left} ), 0 )
         };
     }
@@ -878,7 +878,7 @@
         .megamenu {
             transform: translate3d(if-ltr(-15px,15px), 0, 0);
         }
-
+        
         > a {
             display: block;
             &::after {

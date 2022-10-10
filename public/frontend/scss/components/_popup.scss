@@ -29,7 +29,7 @@
     padding: 4rem 2rem;
 }
 
-// Popup content
+// Popup content 
 .mfp-content > * {
     position: relative;
     margin: auto;
@@ -58,7 +58,7 @@
     opacity: .5;
     #{$right}: 10%;
     #{$left}: auto;
-    transition: opacity .3s;
+    transition: opacity .3s;    
 }
 .pswp__ui > button {
     &::before {
@@ -96,7 +96,7 @@
 // }
 
 // @media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
-//     .pswp--svg .pswp__button--arrow--left:before,
+//     .pswp--svg .pswp__button--arrow--left:before, 
 //     .pswp--svg .pswp__button--arrow--right:before {
 //         background-image: none !important;
 //     }
@@ -201,7 +201,7 @@
     .popup-media {
         margin-bottom: 1.7rem;
     }
-
+    
     h4 {
         margin-bottom: .4rem;
         font-size: 2rem;
@@ -218,16 +218,16 @@
         font-size: 2.8rem;
         line-height: 1.2;
     }
-
+    
     p {
         margin-bottom: 2.3rem;
         line-height: 1.75
     }
-
+    
     .input-wrapper-inline {
         max-width: 34rem;
         margin-bottom: 3rem;
-
+    
         .form-control {
             min-height: 4.4rem;
             border-color: #ccc;
@@ -250,7 +250,7 @@
     max-width: 36rem;
 }
 
-// Popup - Product
+// Popup - Product 
 .mfp-product {
     .mfp-container {
         padding: 4rem 3rem 2rem;
@@ -393,8 +393,8 @@ body .product-popup {
     transform: scale(1);
 }
 .mfp-zoom-popup .mfp-content, .mfp-removing.mfp-zoom-popup .mfp-content {
-    transition: .4s ease-in-out;
-    transform: scale(0.8);
+    transition: .4s ease-in-out; 
+    transform: scale(0.8); 
 }
 
 

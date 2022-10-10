@@ -221,7 +221,7 @@
 							}
 						});
 				}
-
+				
 				if ($.isFunction(settings.callback)) {
 					settings.callback.call(img);
 				}

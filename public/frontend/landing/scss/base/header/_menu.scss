@@ -295,7 +295,7 @@
             vertical-align: middle;
         }
         // List Padding
-        li {
+        li { 
             a {
                 padding-#{$left}: 2.4rem;
             }
@@ -358,7 +358,7 @@
         // if page wrapper has margin-left, then recalculate it's movement
         margin-#{$left}: #{get( mobile-menu, container, max-width )};
         margin-#{$left}: -#{
-            get( mobile-menu, container, max-width ) -
+            get( mobile-menu, container, max-width ) - 
             if( get( base, page-wrapper, margin-#{$left} ), get( base, page-wrapper, margin-#{$left} ), 0 )
         };
     }

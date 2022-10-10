@@ -40,27 +40,27 @@
             line-height: 1.8;
         }
     }
-    .icon-box.text-center i {
+    .icon-box.text-center i { 
         display: block;
-        font-size: 6rem;
+        font-size: 6rem; 
         color: #333;
         transition: transform .4s;
     }
-
+    
     .text-center .icon-box-icon {
-        margin-bottom: 1.9rem;
+        margin-bottom: 1.9rem; 
     }
-
+    
     .icon-box.text-center:hover {
         .icon-box-icon i {
             color: $primary-color;
-            transform: scale(1.1);
+            transform: scale(1.1); 
         }
         p {
             text-decoration: underline;
         }
     }
-
+    
     .icon-box.icon-box-side {
         .icon-orders, .icon-map-marker { margin-#{$right}: 1rem; }
         .w-icon-download { font-size: 2.4rem; }
@@ -81,7 +81,7 @@
         .icon-box-title {
             font-size: 2rem;
         }
-
+        
     }
     .order:not(th) {
         padding-top: .9rem;

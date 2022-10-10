@@ -371,8 +371,8 @@
     }
 }
 
-.product-action-horizontal,
-.product-hidden-details,
+.product-action-horizontal, 
+.product-hidden-details, 
 .product-list .product-details {
     .btn-product-icon {
         &:hover, &:active, &:focus {
@@ -439,7 +439,7 @@
             display: none;
         }
     }
-    .btn-product-icon {
+    .btn-product-icon {  
         visibility: hidden;
         opacity: 0;
     }
@@ -581,7 +581,7 @@
     }
 }
 
-// Product Price
+// Product Price 
 .product-price {
     @include print_css( product, price );
     line-height: 1.6;
@@ -870,7 +870,7 @@
             }
         }
     }
-    &:hover {
+    &:hover { 
         box-shadow: 0 2rem 1.6rem -1.6rem rgba(0,0,0,.5);
         &::before {
             opacity: 1;

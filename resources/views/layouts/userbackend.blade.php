@@ -55,7 +55,7 @@
 
 
 <!-- Plugin JS File -->
-@include('layouts.partials.ubackendjs')
+@include('layouts.partials.js')
 </body>
 
 </html>

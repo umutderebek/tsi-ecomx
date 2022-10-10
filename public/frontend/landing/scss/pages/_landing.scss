@@ -77,7 +77,7 @@
     }
     .banner-subtitle {
         font-size: 2.4em;
-        margin: 4.8rem 0 2.1rem;
+        margin: 4.8rem 0 2.1rem;        
         letter-spacing: .025em;
     }
     .banner-title {
@@ -252,7 +252,7 @@
 .desc-img-wrapper {
     position: relative;
     height: 40.2rem;
-    margin-bottom: 12rem;
+    margin-bottom: 12rem;    
     > * {
         position: absolute;
         border-radius: .5rem;
@@ -351,7 +351,7 @@
     .count-wrapper {
         display: inline-flex;
         font-size: 4.8rem;
-        line-height: 1;
+        line-height: 1;   
         &::before,
         &::after {
             content: '-';
@@ -378,8 +378,8 @@
 /* Main Reason Section */
 .main-reason-section {
     padding: 12rem 0 7rem;
-    min-height: 163.5rem;
-    font-size: 1rem;
+    min-height: 163.5rem; 
+    font-size: 1rem; 
     .count-wrapper {
         position: absolute;
         top: 0;
@@ -405,7 +405,7 @@
             height: 18rem;
             #{$left}: 2rem;
             border-radius: 50%;
-            border: 1px solid #fff;
+            border: 1px solid #fff;     
             &:nth-child(2) {
                 animation-delay: 1s;
             }
@@ -431,7 +431,7 @@
             margin-#{$left}: 11rem;
             padding: side-values(1.2rem 3rem 1.3rem 10rem);
             opacity: .9;
-            z-index: 1;
+            z-index: 1;               
             &:first-child {
                 background-color: #226395;
                 background: linear-gradient(120deg, #417aa4 10%, #226395 60%);
@@ -454,7 +454,7 @@
         max-width: 40rem;
         opacity: .7;
     }
-    // timeline
+    // timeline 
     .timeline::before {
         width: 2px;
         top: 50%;
@@ -479,7 +479,7 @@
             padding-#{$right}: 3rem;
             margin-#{$right}: 3.5rem;
         }
-        &.right .timeline-content {
+        &.right .timeline-content {                
             padding-#{$left}: 3rem;
             margin-#{$left}: 3.5rem;
         }
@@ -634,7 +634,7 @@
         font-weight: 400;
         transition: transform 0.3s;
         background: linear-gradient(160deg, #c54fff 25%, #3f73fe 75%);
-
+    
         &:before {
             content: '';
             position: absolute;
@@ -755,7 +755,7 @@
     .image-box {
         margin-bottom: 5.2rem;
     }
-
+    
     @include mq('xl') {
         .section-desc {
             max-width: 65rem;
@@ -839,7 +839,7 @@
             stroke-dashoffset: 1500;
             stroke-dasharray: 1500;
             transition: transform .3s, fill .5s;
-
+            
         }
         &:hover {
             svg {
@@ -852,7 +852,7 @@
             p {
                 color: $primary-color;
             }
-        }
+        } 
         p {
             font-weight: 600;
             color: #333;
@@ -887,7 +887,7 @@
         opacity: 1;
         border: 1px solid #fff;
         background-color: transparent;
-        border-radius: 8px;
+        border-radius: 8px; 
         transition: width .3s;
         width: 8px;
         height: 8px;
@@ -1006,7 +1006,7 @@
             width: 6rem;
             height: 5.5rem;
         }
-    }
+    } 
 }
 @include mq(lg, max) {
     .main-features {
@@ -1032,7 +1032,7 @@
             bottom: 25%;
             width: 115px;
         }
-    }
+    } 
     .section-wp {
         padding-bottom: 10rem;
         font-size: .9rem;
@@ -1132,7 +1132,7 @@
         .section-title {
             font-size: 3em;
         }
-    }
+    } 
     .intro-banner{
         font-size: .6rem;
     }

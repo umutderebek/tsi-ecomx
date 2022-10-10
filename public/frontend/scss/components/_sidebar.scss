@@ -148,7 +148,7 @@
     }
 }
 
-// Price Range
+// Price Range 
 .price-range {
     display: flex;
     margin: 1.3rem 0 1rem;
@@ -161,7 +161,7 @@
         width: 62px;
         height: 37px;
         line-height: 37px;
-        vertical-align: middle;
+        vertical-align: middle;    
         -webkit-appearance: textfield;
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
@@ -233,7 +233,7 @@
                 @include only-for-retina(1.5) {
                     text-indent: 0;
                 }
-            }
+            } 
         }
         .active > a::before {
             content: '\f00c';
@@ -246,7 +246,7 @@
             padding-top: 3px;
             font-weight: 600;
         }
-    }
+    }    
     &.search-ul a {
         &::before {
             content: none;
@@ -257,7 +257,7 @@
         i {
             transform: rotate(-180deg);
         }
-    }
+    }    
     li span {
         position: absolute;
         #{$right}: 0;
@@ -343,7 +343,7 @@
     .filter-items {
         padding: .7rem 0 1rem;
         a:not(.btn) {
-            padding: 1rem 0;
+            padding: 1rem 0; 
             color: #333;
         }
         .btn {
@@ -628,7 +628,7 @@
     .widget.widget-products .widget-body {
         padding: 1rem 0 2rem;
     }
-
+    
     .product-widget {
         .product-media {
             padding-#{$left}: .2rem;
@@ -757,7 +757,7 @@
     }
 }
 
-// Responsive
+// Responsive 
 // @include mq('lg', 'max') {
 //     .sidebar-content {
 //         width: 30rem;
@@ -768,7 +768,7 @@
     .page-wrapper {
         .sidebar-active & {
             margin-#{$left}: #{
-                if( get( base, page-wrapper, margin-#{$left}), get( base, page-wrapper, margin-#{$left}), 0 ) +
+                if( get( base, page-wrapper, margin-#{$left}), get( base, page-wrapper, margin-#{$left}), 0 ) + 
                 get( sidebar, _page-move )
             };
             margin-#{$right}: #{
@@ -776,7 +776,7 @@
                 get( sidebar, _page-move )
             };
         }
-
+    
         .right-sidebar-active & {
             margin-#{$left}: #{
                 if( get( base, page-wrapper, margin-#{$left}), get( base, page-wrapper, margin-#{$left}), 0 ) -

@@ -11,7 +11,7 @@
 // Variables
 @include set-default(
     (
-        base: (
+        base: ( 
             title: (
                 margin-bottom: 1.7rem,
                 font-size: 2rem,
@@ -82,7 +82,7 @@
     )
 );
 
-/*  Default */
+/*  Default */ 
 .title {
     display: flex;
     flex-wrap: wrap;
@@ -100,7 +100,7 @@
         background-color: $primary-color;
         z-index: 1;
     }
-
+    
     // Title-Small
     &.title-sm {
         font-size: 1.6rem;
@@ -209,7 +209,7 @@
     }
 }
 
-// Tab
+// Tab 
 .tab-with-title {
     display: flex;
     align-items: center;
@@ -219,7 +219,7 @@
         border-bottom: 0;
     }
     .nav-item:not(:last-child) {
-        @include css( margin-#{$right}, base, title-tab, _item-gap );
+        @include css( margin-#{$right}, base, title-tab, _item-gap );  
     }
     .nav-link {
         @include print_css( base, title-tab, nav-link );
@@ -268,7 +268,7 @@
     .nav-item .nav-link.active,
     .nav-item:hover .nav-link {
         color: $primary-color;
-    }
+    }   
 }
 
 // Title Separator
@@ -368,7 +368,7 @@
         flex-direction: column;
         .title {
             margin-bottom: 1rem;
-        }
+        }   
         .nav-filters {
             justify-content: center;
             li {

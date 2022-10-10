@@ -229,7 +229,7 @@
 }
 
 @include mq('lg') {
-
+    
 }
 
 @include mq('lg', 'max') {
@@ -272,7 +272,7 @@
     .toolbox-pagination {
         flex-direction: column;
     }
-
+    
     .product-lists .product-list {
         border-top: 0;
     }

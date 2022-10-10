@@ -191,7 +191,7 @@
         padding: .3rem .9rem;
         border-radius: 3px;
         background-color: #f7f7f7;
-    }
+    }    
 }
 .ratings-full::before { color: $border-color-light;}
 .product-deals-wrapper {
@@ -211,7 +211,7 @@
         font-size: 3em;
     }
     .banner-price-info {
-        font-size: 1.6em;
+        font-size: 1.6em;   
     }
     .banner-divider {
         margin-top: 1.5rem;
@@ -531,8 +531,8 @@
     }
     .title-link-wrapper {
         align-items: center;
-        .product-countdown-container {
-            margin: 0 auto 1rem auto;
+        .product-countdown-container { 
+            margin: 0 auto 1rem auto; 
         }
     }
 }

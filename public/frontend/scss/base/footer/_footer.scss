@@ -108,7 +108,7 @@
     )
 );
 
-// Footer
+// Footer 
 .footer {
     @include print_css( footer );
     a {
@@ -138,13 +138,13 @@
     }
 
     .category-box {
-        flex-wrap: wrap;
+        flex-wrap: wrap;      
         display: inline-flex;
         align-items: center;
         @include print_css( footer, category-box );
         &:not(:last-child) {
             margin-bottom: 1.4rem;
-        }
+        }  
         a {
             @include print_css( footer, category-box, items );
             position: relative;
@@ -187,9 +187,9 @@
     .icon-box-side {
         justify-content: #{$left};
     }
-    .icon-box-title {
+    .icon-box-title { 
         margin-bottom: .2rem;
-        font-size: 1.6rem;
+        font-size: 1.6rem; 
     }
     .icon-box-icon {
         margin-#{$right}: 2rem;
@@ -357,7 +357,7 @@
     flex-direction: column;
     align-items: center;
     color: #666;
-    margin: side-values(1.4rem 0 1.3rem);
+    margin: side-values(1.4rem 0 1.3rem); 
     i, .cart-dropdown & i {
         font-size: 2.3rem;
         color: #666;
@@ -399,7 +399,7 @@
     }
 }
 
-// Responsive
+// Responsive 
 @include mq(lg) {
     .footer-top .col-lg-3 {
         flex: 0 0 22.22%;
@@ -424,7 +424,7 @@
             }
         }
     }
-    .footer-newsletter .icon-box-side { justify-content: center; }
+    .footer-newsletter .icon-box-side { justify-content: center; }   
 }
 
 @include mq(md, max) {

@@ -24,7 +24,7 @@ window.Wolmart = {};
 
     /**
      * Make a macro task
-     *
+     * 
      * @param {function} fn
      * @param {number} delay
      */
@@ -253,7 +253,7 @@ window.Wolmart = {};
 
     /**
      * @function requestTimeout
-     *
+     * 
      * @param {function} fn
      * @param {number} delay
      */
@@ -318,7 +318,7 @@ window.Wolmart = {};
 
     //     /**
     //      * @function deleteTimeout
-    //      * @param {number} timerId
+    //      * @param {number} timerId 
     //      */
     //     Wolmart.deleteTimeout = function (timerId) {
     //         if (!timerId) {
@@ -337,8 +337,8 @@ window.Wolmart = {};
     //     /**
     //      * @function setTab
     //      * Register event for tab click
-    //      *
-    //      * @param {string} selector
+    //      * 
+    //      * @param {string} selector 
     //      */
     //     Wolmart.setTab = function (selector) {
 
@@ -424,7 +424,7 @@ window.Wolmart = {};
     /**
      * @function setStickyContent
      * Set sticky content
-     *
+     * 
      * @param {string} selector
      */
     Wolmart.setStickyContent = function (selector, settings) {
@@ -527,7 +527,7 @@ window.Wolmart = {};
     /**
      * @function parallax
      * Set parallax background
-     *
+     * 
      * @requires themePluginParallax
      * @param {string} selector
      */
@@ -586,9 +586,9 @@ window.Wolmart = {};
 
     //     /**
     //      * @function initNavFilter
-    //      *
+    //      * 
     //      * @requires isotope
-    //      * @param {string} selector
+    //      * @param {string} selector 
     //      */
     //     Wolmart.initNavFilter = function (selector) {
     //         if ($.fn.isotope) {
@@ -613,9 +613,9 @@ window.Wolmart = {};
 
     //     /**
     //      * @function ratingTooltip
-    //      *
+    //      * 
     //      * Find all .ratings-full from root, and initialized tooltip.
-    //      * @param {HTMLElement} root
+    //      * @param {HTMLElement} root 
     //      */
     //     Wolmart.ratingTooltip = function (root) {
     //         var els = Wolmart.byClass('ratings-full', root ? root : document.body),
@@ -632,10 +632,10 @@ window.Wolmart = {};
 
 
     //     /**
-    //      * @function setProgressBar
-    //      *
+    //      * @function setProgressBar 
+    //      * 
     //      * Find all .progress-bar and set its value
-    //      * @param { String } selector
+    //      * @param { String } selector 
     //      */
     //     Wolmart.setProgressBar = function (selector) {
     //         Wolmart.$(selector).each(function () {
@@ -657,7 +657,7 @@ window.Wolmart = {};
     //     /**
     //      * @Function alert
     //      * Register events for alert
-    //      *
+    //      * 
     //      * @param {string} selector
     //      */
     //     Wolmart.alert = function (selector) {
@@ -672,8 +672,8 @@ window.Wolmart = {};
     //     /**
     //      * @function accordion
     //      * Register events for accordion
-    //      *
-    //      * @param {String} selector
+    //      * 
+    //      * @param {String} selector 
     //      */
     //     Wolmart.accordion = function (selector) {
     //         Wolmart.$body.on('click', selector, function (e) {
@@ -731,7 +731,7 @@ window.Wolmart = {};
     }
     /**
      * @function appearAnimate
-     *
+     * 
      * @param {String} selector
      */
     Wolmart.appearAnimate = function (selector) {
@@ -760,8 +760,8 @@ window.Wolmart = {};
 
     //     /**
     //      * @function countDown
-    //      *
-    //      * @param {String} selector
+    //      * 
+    //      * @param {String} selector 
     //      */
     //     Wolmart.countDown = function (selector) {
     //         if ($.fn.countdown) {
@@ -804,7 +804,7 @@ window.Wolmart = {};
     //     /**
     //      * @function priceSlider
     //      * Create Price Slider
-    //      *
+    //      * 
     //      * @requires noUiSlider
     //      * @param {string} selector
     //      * @param {object} option
@@ -852,7 +852,7 @@ window.Wolmart = {};
 
     //     /**
     //      * @function stickySidebar
-    //      *
+    //      * 
     //      * @requires themeSticky
     //      * @param {string} selector
     //      */
@@ -885,7 +885,7 @@ window.Wolmart = {};
 
     //     /**
     //      * @function zoomImageOptions
-    //      *
+    //      * 
     //      * @requires elevateZoom
     //      * @param {jQuery} $el
     //      */
@@ -915,9 +915,9 @@ window.Wolmart = {};
 
     //     /**
     //      * @function playVideo
-    //      *
+    //      * 
     //      * play videos
-    //      * @param {string} selector
+    //      * @param {string} selector 
     //      */
     //     Wolmart.playVideo = function (selector) {
     //         $(selector + ' .btn-play-video').on('click', function (e) {
@@ -941,7 +941,7 @@ window.Wolmart = {};
 
     /**
      * @function lazyLoad
-     *
+     * 
      * lazyload element
      * @param {string} selector
      * @param {boolean} force
@@ -1003,7 +1003,7 @@ window.Wolmart = {};
 
     /**
      * @function countTo
-     *
+     * 
      * @requires jQuery.countTo
      * @param {String} selector
      */
@@ -1188,7 +1188,7 @@ window.Wolmart = {};
     // })(jQuery);
     /**
      * Wolmart Dependent Plugin - Slider
-     *
+     * 
      * @requires Swiper
      * @instance multiple
      */
@@ -1197,7 +1197,7 @@ window.Wolmart = {};
         function Slider($el, options) {
             return this.init($el, options);
         }
-
+    
         // Private Properties
         var onInitialize = function (e) {
             var wrapperEl = this.wrapperEl;
@@ -1230,11 +1230,11 @@ window.Wolmart = {};
         }
         var onTranslated = function ( e ) {
             $( window ).trigger( 'appear.check' );
-
-            // Video Play
+    
+            // Video Play	
             var $el = $( e.currentTarget ),
                 $activeVideos = $el.find( '.swiper-slide.active video' );
-
+    
             $el.find( '.swiper-slide:not(.active) video' ).each( function () {
                 // if ( !this.paused ) {
                 //     $el.trigger( 'play.owl.autoplay' );
@@ -1242,7 +1242,7 @@ window.Wolmart = {};
                 this.pause();
                 this.currentTime = 0;
             } );
-
+    
             if ( $activeVideos.length ) {
                 // if ( true === $el.data( 'owl.carousel' ).options.autoplay ) {
                 //     $el.trigger( 'stop.owl.autoplay' );
@@ -1255,7 +1255,7 @@ window.Wolmart = {};
         var onSliderInitialized = function () {
             var self = this,
                 $el = $( this.wrapperEl );
-
+            
             // carousel content animation
             $el.find('.swiper-slide-active .slide-animate').each(function () {
                 var $animation_item = $(this),
@@ -1266,12 +1266,12 @@ window.Wolmart = {};
                     duration = settings.duration,
                     delay = settings.delay,
                     aniName = settings.name;
-
+    
                 setTimeout(function () {
                     $animation_item.css('animation-duration', duration);
                     $animation_item.css('animation-delay', delay);
                     $animation_item.addClass(aniName);
-
+    
                     if ($animation_item.hasClass('maskLeft')) {
                         $animation_item.css('width', 'fit-content');
                         var width = $animation_item.width();
@@ -1284,7 +1284,7 @@ window.Wolmart = {};
                     var temp = Wolmart.requestTimeout(function () {
                         $animation_item.addClass('show-content');
                     }, (delay ? Number((delay).slice(0, -1)) * 1000 + 200 : 200));
-
+    
                     self.timers.push(temp);
                 }, 300);
             });
@@ -1328,14 +1328,14 @@ window.Wolmart = {};
                             duration = settings.duration,
                             delay = settings.delay,
                             aniName = settings.name;
-
+    
                         $animation_item.css( 'animation-duration', duration );
                         $animation_item.css( 'animation-delay', delay );
                         $animation_item.css( 'transition-property', 'visibility, opacity' );
                         $animation_item.css( 'transition-delay', delay );
                         $animation_item.css( 'transition-duration', duration );
                         $animation_item.addClass( aniName );
-
+    
                         duration = duration ? duration : '0.75s';
                         $animation_item.addClass( 'show-content' );
                         var temp = Wolmart.requestTimeout( function () {
@@ -1352,21 +1352,21 @@ window.Wolmart = {};
                 self.translateFlag = 0;
             }
         }
-
+    
         // Public Properties
         Slider.defaults = {
             slidesPerView: 1,
             // grabCursor: true,
         }
-
+    
         Slider.zoomImage = function () {
             Wolmart.zoomImage(this.$element);
         }
-
+    
         Slider.zoomImageRefresh = function () {
             this.$element.find('img').each(function () {
                 var $this = $(this);
-
+    
                 if ($.fn.zoom) {
                     var zoom = $this.data('zoom');
                     if (typeof zoom !== 'undefined') {
@@ -1378,7 +1378,7 @@ window.Wolmart = {};
                 }
             });
         }
-
+    
         Slider.presets = {
             // 'intro-slider': {
             //     animateIn: 'fadeIn',
@@ -1404,7 +1404,7 @@ window.Wolmart = {};
             //     onRefreshed: Slider.zoomImageRefresh
             // }
         }
-
+    
         Slider.prototype.init = function ( $el, options ) {
             this.timers = [];
             this.translateFlag = 0;
@@ -1416,21 +1416,21 @@ window.Wolmart = {};
                 $navigationPrev = $el.children('.swiper-button-prev'),
                 $pagination = $el.children('.swiper-pagination'),
                 $dotscontainer = $el.children('.custom-dots');
-
+    
             if( $el.data('slider') ) {
                 return;
             }
-
+    
             Wolmart.lazyLoad( $el, true );
             var classes = $el.attr( 'class' ).split( ' ' ),
                 settings = $.extend( true, {}, Slider.defaults );
-
+               
             // extend preset options
             classes.forEach( function ( className ) {
                 var preset = Slider.presets[ className ];
                 preset && $.extend( true, settings, preset );
             } );
-
+    
             // navigation and pagination
             $navigationNext.length && $.extend( true, settings, {
                 navigation: {
@@ -1448,27 +1448,27 @@ window.Wolmart = {};
                     clickable: true
                 }
             });
-
+    
             // video
             var $videos = $el.find( 'video' );
             $videos.each( function () {
                 this.loop = false;
             } );
-
+    
             // extend user options
             $.extend( true, settings, Wolmart.parseOptions( $el.attr( 'data-swiper-options' ) ), options );
-
+    
             // init
             onInitialize.call(this); // remove grid classes from swiper-wrapper
-
+    
             this.slider = new Swiper( this.container, settings );
             $el.data('slider', this.slider);
-
+    
             $el.trigger('initialized.slider', this.slider);
-
+    
             this.slider.on( 'afterInit', onInitialized )
                 .on( 'transitionEnd', onTranslated );
-
+    
             // if animation slider
             if( $el.hasClass( 'animation-slider' ) ) {
                 onSliderInitialized.call(this);
@@ -1477,7 +1477,7 @@ window.Wolmart = {};
                 this.slider.on( 'resize', onSliderResized )
                     .on( 'transitionStart', onSliderTranslate.bind( this ) )
                     .on( 'transitionEnd', onSliderTranslated.bind( this ) );
-
+    
             // if slider has custom dots container
             if ( $dotscontainer.length ) {
                 this.slider.on('transitionEnd', function () {
@@ -1486,24 +1486,24 @@ window.Wolmart = {};
                 });
                 $dotscontainer.children( 'a' ).on( 'click', function ( e ) {
                     e.preventDefault();
-
+    
                     var $this = $( this );
-
+    
                     if ( !$this.hasClass( 'active' ) ) {
                         var index = $this.index(),
                             $slider = $this.closest('.swiper-container').data('slider');
-
+    
                         $slider.slideTo( index );
                         $this.addClass( 'active' ).siblings().removeClass( 'active' );
                     }
                 } );
             }
         }
-
+    
         Wolmart.slider = function (selector, options = {}, createDirectly = false) {
             Wolmart.$(selector).each(function () {
                 var $this = $(this);
-
+    
                 createDirectly ? new Slider($this, options) : Wolmart.call(function () {
                     new Slider($this, options);
                 });
@@ -1512,9 +1512,9 @@ window.Wolmart = {};
     })(jQuery);
     // /**
     //  * Wolmart Plugin - Sidebar
-    //  *
+    //  * 
     //  * @instance multiple
-    //  *
+    //  * 
     //  * sidebar active class will be added to body tag: "sidebar class" + "-active"
     //  */
 
@@ -1639,7 +1639,7 @@ window.Wolmart = {};
     // })(jQuery);
     // /**
     //  * Wolmart Dependent Plugin - Shop
-    //  *
+    //  * 
     //  * @requires
     //  */
 
@@ -1837,7 +1837,7 @@ window.Wolmart = {};
     // })(jQuery);
     // /**
     //  * Wolmart Plugin - QuantityInput
-    //  *
+    //  * 
     //  * @instance multiple
     //  */
 
@@ -1954,7 +1954,7 @@ window.Wolmart = {};
     // /**
     //  * Wolmart Plugin - Popup
     //  *
-    //  * @requires magnificPopup
+    //  * @requires magnificPopup 
     //  * @instance multiple
     //  */
     // function Popup(options, preset) {
@@ -2025,7 +2025,7 @@ window.Wolmart = {};
     // })(jQuery);
     // /**
     //  * Wolmart Plugin - Product Single
-    //  *
+    //  * 
     //  * @requires OwlCarousel
     //  * @requires elevateZoom
     //  * @instance multiple
@@ -2294,7 +2294,7 @@ window.Wolmart = {};
     // })(jQuery);
     // /**
     //  * Wolmart Plugin - Product Single Page
-    //  *
+    //  * 
     //  * @requires Slider
     //  * @requires ProductSingle
     //  * @requires PhotoSwipe
@@ -2436,7 +2436,7 @@ window.Wolmart = {};
     //         months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     //         days: ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
     //         displayYear: true,      // Display year in header
-    //         fixedStartDay: true,    // Week always begins with Sunday or Monday by setting number 0 or 1. If startDay is false, week always begin with firstday of month
+    //         fixedStartDay: true,    // Week always begins with Sunday or Monday by setting number 0 or 1. If startDay is false, week always begin with firstday of month 
     //         dayNumber: 0,           // Week always begins with Sunday
     //         dayExcerpt: 3,          // length of abbreviation of day. If it is equal to 3, the day will be "Sun", "Mon", etc
     //     }
@@ -2475,10 +2475,10 @@ window.Wolmart = {};
 
     //     /**
     //      * @function render
-    //      *
+    //      * 
     //      * Render Calendar
-    //      * @param {Date} fd
-    //      * @param {HTMLElement} $calendar
+    //      * @param {Date} fd 
+    //      * @param {HTMLElement} $calendar 
     //      */
     //     Calendar.prototype.render = function (fd, $calendar) {
     //         var self = this;
@@ -2550,7 +2550,7 @@ window.Wolmart = {};
 
     //     /**
     //      * @function changeMonth
-    //      *
+    //      * 
     //      * Change Month
     //      * @param {Number} dm - increment of month
     //      */
@@ -2563,7 +2563,7 @@ window.Wolmart = {};
 
     //     /**
     //      * @function bindEvents
-    //      *
+    //      * 
     //      * Bind events to prev & next button
     //      */
     //     Calendar.prototype.bindEvents = function () {
@@ -2641,7 +2641,7 @@ window.Wolmart = {};
         // Wolmart.countDown('.product-countdown, .countdown');  // Initialize CountDown
         // Wolmart.initPopup();                                    // Initialize Popup
         // Wolmart.initNotificationAlert();                        // Initialize Notification Alert
-        Wolmart.countTo('.count-to');                         // Initialize CountTo
+        Wolmart.countTo('.count-to');                         // Initialize CountTo 
     };
 })(jQuery);
 

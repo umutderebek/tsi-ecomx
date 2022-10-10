@@ -44,7 +44,7 @@
                     color: #fff,
                     text-align: center
                 )
-            ),
+            ), 
             category: (
                 toggle: (
                     background: #fff,
@@ -79,7 +79,7 @@
             opacity: 1;
             top: 100%;
         }
-
+        
         &::after {
             visibility: visible;
             opacity: 1;
@@ -251,7 +251,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        text-transform: uppercase;
+        text-transform: uppercase;  
         margin-bottom: 1.4rem;
         span {
             font-size: 1.6rem;
@@ -386,7 +386,7 @@
     .product-detail {
         flex: 1;
     }
-
+    
     .product-name {
         white-space: normal;
         padding: 0;
@@ -441,11 +441,11 @@
 }
 
 
-// Category Dropdown
+// Category Dropdown 
 .category-dropdown {
     > a {
         @include print_css( header, category, toggle );
-
+        
         i {
             @include print_css( header, category, toggle, icon );
         }
@@ -497,7 +497,7 @@
         opacity: 0;
         top: calc(100% - 20px);
     }
-    &.menu-fixed {
+    &.menu-fixed { 
         .dropdown-box,
         &::after {
             visibility: hidden;

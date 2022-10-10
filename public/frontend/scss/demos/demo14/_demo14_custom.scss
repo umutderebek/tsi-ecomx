@@ -39,13 +39,13 @@
             i.w-icon-map-marker{
                 font-size: 2.1rem;
                 margin: -.4rem .7rem 0 0;
-            }
+            }   
         }
     }
     .dropdown{
         margin-top: -.1rem;
     }
-}
+} 
 .vertical-menu > .has-submenu > a::after{
     font-size: 1.4rem;
 }
@@ -318,7 +318,7 @@
             margin-left: .3rem;
             font-size: 1.8rem;
         }
-    }
+    }    
     .grid-item4{
         .banner-content{
             left: 8.8%;
@@ -393,7 +393,7 @@
             &::after{
                 transform: scaleX(1);
                 transform-origin: left center;
-            }
+            }  
         }
         &::after{
             position: absolute;
@@ -473,14 +473,14 @@
 }
 /* Special-Offer */
 .special-offer{
-    padding: 4.2rem 0 6rem 0;
+    padding: 4.2rem 0 6rem 0; 
     background-color: #f8f8f8;
     .bg-white{
         padding: 1rem 3rem;
     }
     .banner-wrapper img{
         min-height: 20rem;
-    }
+    } 
     .banner-content{
         left: 9%;
         margin-top: -2px;
@@ -497,7 +497,7 @@
             font-size: 1.4em;
             margin-bottom: 1.8rem;
             color: rgba(#eee,0.7)
-        }
+        }   
     }
 }
 /* Brands Wrapper */
@@ -508,7 +508,7 @@
 .title-post{
     .title {
         padding: 0.6rem 0;
-    }
+    } 
     a i{
         font-size: 1.7rem;
         margin: 0 0 .3rem .3rem;
@@ -520,7 +520,7 @@
     a {
         font-size: 1.4rem;
     }
-}
+} 
 .post-details{
     .post-title{
         overflow: hidden;
@@ -593,7 +593,7 @@
     }
 }
 @include mq(lg) {
-    .intro-wrapper {
+    .intro-wrapper { 
         .intro-slide-wrapper{
             max-width: 68.1%;
             flex: 0 0 68.1%;
@@ -605,7 +605,7 @@
     }
 }
 @include mq(lg,'max') {
-    .intro-wrapper {
+    .intro-wrapper { 
         margin-left: 0;
     }
 }

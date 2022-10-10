@@ -21,7 +21,7 @@ $second-font-family: "Zeyada", Sans-serif;
 /* 3. mixins */
 @import '../../mixins/breakpoint';
 @import '../../mixins/core';
-@import '../../mixins/buttons';
+@import '../../mixins/buttons'; 
 @import '../../mixins/direction';
 
 @import 'demo3_config';
@@ -41,7 +41,7 @@ $second-font-family: "Zeyada", Sans-serif;
 @import '../../components/animation';
 @import '../../components/banner';
 @import '../../components/blog';
-@import '../../components/breadcrumb';
+@import '../../components/breadcrumb';	
 @import '../../components/buttons';
 @import '../../components/categories';
 @import '../../components/cta';

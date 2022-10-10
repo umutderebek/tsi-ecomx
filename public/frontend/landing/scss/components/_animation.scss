@@ -210,13 +210,13 @@
         transform: translate(0,-50px);
         transform-origin: 0 0;
     }
-
+  
     to {
         opacity: 1;
         transform: none
     }
 }
-
+  
 .fadeInDownShorter {
     animation-name: fadeInDownShorter
 }
@@ -364,7 +364,7 @@
     from {
         transform: translate(0,100%)
     }
-
+  
     to {
         transform: translate(0,0)
     }

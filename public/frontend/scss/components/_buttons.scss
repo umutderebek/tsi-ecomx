@@ -19,7 +19,7 @@
             - Infinite Loop
 --------------------------------------*/
 
-// Button
+// Button 
 .btn {
     display: inline-block;
     border: 2px solid #ccc;
@@ -46,7 +46,7 @@
     &:focus {
         color: #666;
         border-color:   darken( #eee , 7% );
-        background-color: darken( #eee , 7% );
+        background-color: darken( #eee , 7% );  
     }
 
     i {
@@ -271,7 +271,7 @@
     &.btn-rounded {
         border-radius: 3px;
     }
-
+    
     &.btn-ellipse {
         border-radius: 30px;
     }

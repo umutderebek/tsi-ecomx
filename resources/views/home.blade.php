@@ -66,7 +66,7 @@ E')
                         <a href="#account-details" class="nav-link">Account details</a>
                     </li>
                     <li class="link-item">
-                        <a href="wishlist.html">Wishlist</a>
+                        <a href="">Wishlist</a>
                     </li>
                     <li class="link-item">
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
@@ -351,38 +351,38 @@ E')
                                             <tbody>
                                             @if(Auth::user()->ship->country === null)
                                             @else
-                                            <tr>
-                                                <th>Country:</th>
-                                                <td>{{Auth::user()->ship->country}}</td>
-                                            </tr>
+                                                <tr>
+                                                    <th>Country:</th>
+                                                    <td>{{Auth::user()->ship->country}}</td>
+                                                </tr>
                                             @endif
                                             @if(Auth::user()->ship->state === null)
                                             @else
-                                            <tr>
-                                                <th>State:</th>
-                                                <td>{{Auth::user()->ship->state}}</td>
-                                            </tr>
+                                                <tr>
+                                                    <th>State:</th>
+                                                    <td>{{Auth::user()->ship->state}}</td>
+                                                </tr>
                                             @endif
                                             @if(Auth::user()->ship->adress === null)
                                             @else
-                                            <tr>
-                                                <th>Adress:</th>
-                                                <td>{{Auth::user()->ship->adress}}</td>
-                                            </tr>
+                                                <tr>
+                                                    <th>Adress:</th>
+                                                    <td>{{Auth::user()->ship->adress}}</td>
+                                                </tr>
                                             @endif
                                             @if(Auth::user()->ship->adress2 === null)
                                             @else
-                                            <tr>
-                                                <th>Adress-2:</th>
-                                                <td>{{Auth::user()->ship->adress2}}</td>
-                                            </tr>
+                                                <tr>
+                                                    <th>Adress-2:</th>
+                                                    <td>{{Auth::user()->ship->adress2}}</td>
+                                                </tr>
                                             @endif
                                             @if(Auth::user()->ship->zipcode === null)
                                             @else
-                                            <tr>
-                                                <th>Zip Code-2:</th>
-                                                <td>{{Auth::user()->ship->zipcode}}</td>
-                                            </tr>
+                                                <tr>
+                                                    <th>Zip Code-2:</th>
+                                                    <td>{{Auth::user()->ship->zipcode}}</td>
+                                                </tr>
                                             @endif
 
                                             </tbody>
@@ -491,5 +491,6 @@ E')
         </div>
     </div>
     <!-- End of PageContent -->
+
 
 @endsection

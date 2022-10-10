@@ -65,7 +65,7 @@ body:not(.loaded) {
         font-size: 3.3rem;
         color: #666;
         background-color: transparent;
-        opacity: 0;
+        opacity: 0;       
         transition: color .3s, transform .3s, opacity .3s;
     }
     .swiper-button-next {
@@ -89,8 +89,8 @@ body:not(.loaded) {
     }
     .swiper-container {
         .swiper-button-prev:not(.swiper-button-disabled):hover,
-        .swiper-button-next:not(.swiper-button-disabled):hover {
-            color: $primary-color;
+        .swiper-button-next:not(.swiper-button-disabled):hover { 
+            color: $primary-color; 
             background-color: transparent;
         }
     }
@@ -100,18 +100,18 @@ body:not(.loaded) {
     min-height: 520px;
     height: 100%;
     .banner-content { margin-top: -.3rem; }
-    .banner-subtitle {
-        font-size: 4em;
+    .banner-subtitle { 
+        font-size: 4em; 
     }
-    .banner-title {
-        font-size: 5em;
+    .banner-title { 
+        font-size: 5em; 
         margin-bottom: .1rem;
     }
-    p {
+    p { 
         margin-bottom: 2.1rem;
-        font-size: 2.4em;
+        font-size: 2.4em; 
     }
-    .btn {
+    .btn { 
         padding: 1.23em 2.35em;
         font-size: 1.4em;
         i{
@@ -125,8 +125,8 @@ body:not(.loaded) {
 }
 
 .intro-slide1 {
-    .banner-content {
-        #{$right}: 3.9%;
+    .banner-content { 
+        #{$right}: 3.9%; 
     }
     .banner-subtitle {
         span::after {
@@ -146,13 +146,13 @@ body:not(.loaded) {
 }
 
 .intro-slide2 {
-    .banner-content {
-        #{$left}: 27.4%;
+    .banner-content { 
+        #{$left}: 27.4%; 
         margin-top: -.5rem;
     }
-    .banner-subtitle {
+    .banner-subtitle { 
         margin-bottom: .3rem;
-        font-size: 3.8em;
+        font-size: 3.8em; 
     }
     .banner-title {
         line-height: 1.08;
@@ -164,7 +164,7 @@ body:not(.loaded) {
 }
 
 .intro-slide3 {
-    .banner-content {
+    .banner-content { 
         #{$right}: 4.6%;
         margin-top: -0.7rem;
     }
@@ -192,8 +192,8 @@ body:not(.loaded) {
             height: .3rem;
         }
     }
-    p {
-        font-size: 2.2em;
+    p { 
+        font-size: 2.2em; 
         line-height: 1.6;
     }
     .slide-image {
@@ -235,7 +235,7 @@ body:not(.loaded) {
     }
 }
 
-.category-banner-wrapper,
+.category-banner-wrapper, 
 .category-cosmetic-lifestyle {
     img {
         min-height: 20rem;
@@ -282,7 +282,7 @@ body:not(.loaded) {
     .product-gallery-vertical {
         .product-thumbs-wrap {
             max-width: 6rem;
-            flex: 0 0 6rem;
+            flex: 0 0 6rem; 
         }
         .product-single-swiper { max-width: calc( 100% - 7rem );}
     }
@@ -293,12 +293,12 @@ body:not(.loaded) {
     border: 1px solid $border-color;
     transition: border-color .3s;
     .nav-top {
-        >.swiper-button-prev {
-            #{$right}: .2rem;
+        >.swiper-button-prev { 
+            #{$right}: .2rem; 
             #{$left}:unset;
         }
-        >.swiper-button-next {
-            #{$right}: .6rem;
+        >.swiper-button-next { 
+            #{$right}: .6rem; 
             #{$left}:unset;
         }
         >.swiper-button-next,
@@ -313,11 +313,11 @@ body:not(.loaded) {
             }
         }
     }
-    .product-title {
-        font-size: 2rem;
+    .product-title { 
+        font-size: 2rem; 
     }
-    .new-price {
-        font-size: 2.4rem;
+    .new-price { 
+        font-size: 2.4rem; 
         line-height: 1.1;
     }
     .product-details {
@@ -349,7 +349,7 @@ body:not(.loaded) {
 
 .product-widget {
     padding: 1rem 0;
-    .product-media {
+    .product-media { 
         flex: 0 0 11.5rem;
         max-width: 11.5rem;
     }
@@ -357,7 +357,7 @@ body:not(.loaded) {
         flex: 0 0 calc(100% - 11.5rem);
         max-width: calc(100% - 11.5rem);
     }
-    .product-name {
+    .product-name { 
         margin-bottom: .6rem;
         color: #333;
         font-weight: 500;
@@ -373,10 +373,10 @@ body:not(.loaded) {
 
 .widget-products .widget-body {
     padding: 2.6rem 2rem 2.3rem;
-    transition: border-color .3s;
+    transition: border-color .3s; 
 }
 
-.single-product,
+.single-product, 
 .widget-products.widget-products-bordered .widget-body {
     &:hover {
         border-color: $primary-color;
@@ -414,9 +414,9 @@ body:not(.loaded) {
         margin-top: -.1rem;
     }
 }
-.tab-nav-outline .nav-item .nav-link {
+.tab-nav-outline .nav-item .nav-link { 
     padding: 1.1rem 1.9rem;
-    border: 1px solid $border-color-light;
+    border: 1px solid $border-color-light; 
     &.active, &:hover { border-width: 1px; }
 }
 /* Category Banner Wrapper */
@@ -456,19 +456,19 @@ body:not(.loaded) {
     .title {
         padding: 1.1rem 0;
     }
-    a {
-        color: $dark-color;
+    a { 
+        color: $dark-color; 
     }
 }
 
 .content-top {
     padding: 12.4% 13%;
-    .banner-subtitle {
-        font-size: 1.8em;
+    .banner-subtitle { 
+        font-size: 1.8em; 
     }
-    .banner-title {
+    .banner-title { 
         margin-bottom: 2.3rem;
-        font-size: 3em;
+        font-size: 3em; 
         line-height: 1.15;
     }
     .banner-divider {
@@ -566,7 +566,7 @@ body:not(.loaded) {
         }
     }
     background-image: url(../../assets/images/demos/demo-rtl/newsletter-bg.jpg);
-}
+} 
 
 /* Responsive */
 @include mq('xl', 'max') {
@@ -655,7 +655,7 @@ body:not(.loaded) {
         .banner {
             font-size: .9rem;
         }
-    }
+    } 
     .banner-fashion {
         padding-#{$left}: 3rem;
         padding-#{$right}: 3rem;
@@ -685,7 +685,7 @@ body:not(.loaded) {
             line-height: 1;
             margin: 0;
         }
-    }
+    } 
 
     .input-group .form-control{
         padding: 0 1.4rem 0 8rem;

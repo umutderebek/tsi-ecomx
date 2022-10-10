@@ -21,7 +21,7 @@
             text-decoration: underline;
         }
     }
-    .login-content,
+    .login-content, 
     .coupon-content,
     .checkbox-content {
         display: none;
@@ -51,7 +51,7 @@
                 &:hover {
                     text-decoration: underline;
                 }
-            }
+            } 
         }
     }
     .btn-login{
@@ -132,7 +132,7 @@
     }
     .form-control:focus {
         border-color: #999;
-    }
+    } 
 }
 
 .order-table {
@@ -214,8 +214,8 @@
                 width: 18px;
                 height: 18px;
                 border: 1px solid #ccd;
-                border-radius: 50%;
-                transform: translateY(-50%);
+                border-radius: 50%;  
+                transform: translateY(-50%);              
             }
             &::after {
                 content: '';
