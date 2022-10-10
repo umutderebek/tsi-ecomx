@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="tsicom@localhost" uuid="9456f210-bf1d-44f9-bfe7-06337301839d">
+    <data-source source="LOCAL" name="laravel@localhost" uuid="f32f78ef-abda-4c99-b7ed-b3329f282ad5">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mariadb://localhost:3306/tsicom</jdbc-url>
+      <jdbc-url>jdbc:mariadb://localhost:3306/laravel</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

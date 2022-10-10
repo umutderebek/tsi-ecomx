@@ -251,7 +251,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="../../demo1/dist/account/overview.html">
+                            <a class="menu-link" href="">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -268,6 +268,17 @@
 														<span class="bullet bullet-dot"></span>
 													</span>
                                 <span class="menu-title">Categories</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.attribute.index')}}">
+													<span class="menu-bullet">
+														<span class="bullet bullet-dot"></span>
+													</span>
+                                <span class="menu-title">Attributes</span>
                             </a>
                             <!--end:Menu link-->
                         </div>

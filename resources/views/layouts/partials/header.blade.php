@@ -155,14 +155,16 @@
                     <nav class="main-nav">
                         <ul class="menu ">
                             @foreach($kategoriler as $category)
+
                                 <li>
-                                    <a href=""> {{$category->kategori_adi}}</a>
+                                    <a href="{{route('kategori',$category->slug)}}"> {{$category->kategori_adi}}</a>
                                     <ul class="header-menu-categories">
                                         @if ($category->children)
+
                                             @foreach($category->children as $child)
 
                                                 <li class="header-menu-category-links">
-                                                    <a href="#">
+                                                    <a href="{{route('kategori',$child->slug)}}">
                                                         <div class="category-image-div">
                                                             <img
                                                                 src="https://www.tischkoenig.com.tr/media/wysiwyg/kategori/masa/katlanir-masa.png">

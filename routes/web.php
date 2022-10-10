@@ -251,6 +251,7 @@ Route::group(['prefix' => 'Admin-category'], function ()
 
 });
 
+
 Route::group(['prefix' => 'Admin-attributes'], function ()
 {
     Route::match(['get','post'],'/','Admin\Attribute\AttributeController@index')->name('admin.attribute.index');
@@ -261,6 +262,108 @@ Route::group(['prefix' => 'Admin-attributes'], function ()
     Route::get('/sil/{id}','Admin\Attribute\AttributeController@sil')->name('admin.attribute.sil');
 
 });
+
+
+Route::group(['prefix' => 'Admin-attributes-product-certificate'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@ucertindex')->name('admin.ucert.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@ucertform')->name('admin.ucert.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@ucertedit')->name('admin.ucert.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@ucertkaydet')->name('admin.ucert.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@ucertguncelle')->name('admin.ucert.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@ucertsil')->name('admin.ucert.sil');
+
+});
+
+Route::group(['prefix' => 'Admin-attributes-product-malzeme'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@umalzemeindex')->name('admin.malzeme.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@umalzemeform')->name('admin.malzeme.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@umalzemeedit')->name('admin.malzeme.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@umalzemekaydet')->name('admin.malzeme.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@umalzemeguncelle')->name('admin.malzeme.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@umalzemesil')->name('admin.malzeme.sil');
+
+});
+
+Route::group(['prefix' => 'Admin-attributes-product-malzeme'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@umalzemeindex')->name('admin.malzeme.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@umalzemeform')->name('admin.malzeme.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@umalzemeedit')->name('admin.malzeme.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@umalzemekaydet')->name('admin.malzeme.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@umalzemeguncelle')->name('admin.malzeme.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@umalzemesil')->name('admin.malzeme.sil');
+
+});
+
+Route::group(['prefix' => 'Admin-attributes-product-color'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@umalzemeindex')->name('admin.color.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@umalzemeform')->name('admin.color.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@umalzemeedit')->name('admin.color.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@umalzemekaydet')->name('admin.color.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@umalzemeguncelle')->name('admin.color.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@umalzemesil')->name('admin.color.sil');
+
+});
+
+Route::group(['prefix' => 'Admin-attributes-product-malzeme'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@umalzemeindex')->name('admin.malzeme.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@umalzemeform')->name('admin.malzeme.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@umalzemeedit')->name('admin.malzeme.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@umalzemekaydet')->name('admin.malzeme.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@umalzemeguncelle')->name('admin.malzeme.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@umalzemesil')->name('admin.malzeme.sil');
+
+});
+
+Route::group(['prefix' => 'Admin-attributes-product-masacap'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@umalzemeindex')->name('admin.masacap.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@umalzemeform')->name('admin.masacap.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@umalzemeedit')->name('admin.masacap.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@umalzemekaydet')->name('admin.masacap.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@umalzemeguncelle')->name('admin.masacap.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@umalzemesil')->name('admin.masacap.sil');
+
+});
+
+Route::group(['prefix' => 'Admin-attributes-ogrenci-masa-yükseklik'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@umalzemeindex')->name('admin.ogrmasay.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@umalzemeform')->name('admin.ogrmasay.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@umalzemeedit')->name('admin.ogrmasay.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@umalzemekaydet')->name('admin.ogrmasay.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@umalzemeguncelle')->name('admin.ogrmasay.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@umalzemesil')->name('admin.ogrmasay.sil');
+
+});
+
+Route::group(['prefix' => 'Admin-attributes-urun-plaka-size'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@umalzemeindex')->name('admin.urunplakas.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@umalzemeform')->name('admin.urunplakas.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@umalzemeedit')->name('admin.urunplakas.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@umalzemekaydet')->name('admin.urunplakas.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@umalzemeguncelle')->name('admin.urunplakas.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@umalzemesil')->name('admin.urunplakas.sil');
+
+});
+
+Route::group(['prefix' => 'Admin-attributes-urun-size'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@umalzemeindex')->name('admin.urunsize.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@umalzemeform')->name('admin.urunsize.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@umalzemeedit')->name('admin.urunsize.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@umalzemekaydet')->name('admin.urunsize.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@umalzemeguncelle')->name('admin.urunsize.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@umalzemesil')->name('admin.urunsize.sil');
+
+});
+
+
 
 
 
