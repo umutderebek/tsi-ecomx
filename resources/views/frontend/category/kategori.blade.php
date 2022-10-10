@@ -51,12 +51,19 @@
                         <!-- Start of Sticky Sidebar -->
                         <div class="sticky-sidebar">
                             <!-- Start of Collapsible widget -->
+                            @if(count($altkat)>0)
                             <div class="widget widget-collapsible">
-                                <h3 class="widget-title"><span>All Subcategories</span></h3>
+                                <h3 class="widget-title"><span>Categories</span></h3>
                                 <ul class="widget-body filter-items search-ul">
+
+                                    @foreach($altkat as $kat)
+                                        <li><a href="{{route('kategori',$kat->slug)}}">{{$kat->kategori_adi}}</a></li>
+                                    @endforeach
 
                                 </ul>
                             </div>
+                            @else
+                            @endif
                             <!-- End of Collapsible Widget -->
 
                             <!-- Start of Collapsible Widget -->
