@@ -167,7 +167,7 @@
                                                     <a href="{{route('kategori',$child->slug)}}">
                                                         <div class="category-image-div">
                                                             <img
-                                                                src="https://www.tischkoenig.com.tr/media/wysiwyg/kategori/masa/katlanir-masa.png">
+                                                                src="/frontend/uploads/category/masalar/{{$child->kategori_resmi}}">
                                                         </div>
                                                         <div class="category-name">{{$child->kategori_adi}}</div>
                                                     </a>

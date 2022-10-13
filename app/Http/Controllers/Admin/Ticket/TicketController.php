@@ -4,6 +4,14 @@ namespace App\Http\Controllers\Admin\Ticket;
 
 use App\Http\Controllers\Controller;
 use App\Mailers\AppTicMailer;
+use App\Models\KategoriUrun\Uruncerceverenk;
+use App\Models\KategoriUrun\Uruncert;
+use App\Models\KategoriUrun\Uruncolor;
+use App\Models\KategoriUrun\Urunmalzeme;
+use App\Models\KategoriUrun\Urunmasacap;
+use App\Models\KategoriUrun\Urunogrencimasayukseklik;
+use App\Models\KategoriUrun\Urunplakasize;
+use App\Models\KategoriUrun\Urunpsize;
 use App\Models\Ticket\AdminComment;
 use App\Models\Ticket\Category;
 use App\Models\Ticket\Comment;
@@ -24,8 +32,18 @@ class TicketController extends Controller
         $ticket = Ticket::paginate(10);
         $categories = Category::all();
 
+        $uruncerceve = Uruncerceverenk::all()->count();
+        $uruncert = Uruncert::all()->count();
+        $uruncolor = Uruncolor::all()->count();
+        $urunmalzeme = Urunmalzeme::all()->count();
+        $urunmasacap = Urunmasacap::all()->count();
+        $urunoogrencimasayukseklik = Urunogrencimasayukseklik::all()->count();
+        $urunplakasize = Urunplakasize::all()->count();
+        $urunsize = Urunpsize::all()->count();
 
-        return view('backend.Ticket.index', compact('ticket', 'categories'));
+
+        return view('backend.Ticket.index', compact('ticket', 'categories','uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap',
+            'urunoogrencimasayukseklik','urunplakasize','urunsize'));
     }
 
     public function ticketkat($id)
@@ -37,7 +55,17 @@ class TicketController extends Controller
 
     $deneme = $kategori->$kategori;
 
-    return view('backend.ticket.tkategori',compact('kategori','kategoris','ticket','deneme'));
+        $uruncerceve = Uruncerceverenk::all()->count();
+        $uruncert = Uruncert::all()->count();
+        $uruncolor = Uruncolor::all()->count();
+        $urunmalzeme = Urunmalzeme::all()->count();
+        $urunmasacap = Urunmasacap::all()->count();
+        $urunoogrencimasayukseklik = Urunogrencimasayukseklik::all()->count();
+        $urunplakasize = Urunplakasize::all()->count();
+        $urunsize = Urunpsize::all()->count();
+
+    return view('backend.ticket.tkategori',compact('kategori','kategoris','ticket','deneme', 'categories','uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap',
+        'urunoogrencimasayukseklik','urunplakasize','urunsize'));
 
     }
 
@@ -52,7 +80,17 @@ class TicketController extends Controller
 
         $kategoris = Category::all();
 
-        return view('backend.Ticket.show',compact('comments','comments','category','ticket','kategoris'));
+        $uruncerceve = Uruncerceverenk::all()->count();
+        $uruncert = Uruncert::all()->count();
+        $uruncolor = Uruncolor::all()->count();
+        $urunmalzeme = Urunmalzeme::all()->count();
+        $urunmasacap = Urunmasacap::all()->count();
+        $urunoogrencimasayukseklik = Urunogrencimasayukseklik::all()->count();
+        $urunplakasize = Urunplakasize::all()->count();
+        $urunsize = Urunpsize::all()->count();
+
+        return view('backend.Ticket.show',compact('comments','comments','category','ticket','kategoris','kategoris','ticket','deneme', 'categories','uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap',
+            'urunoogrencimasayukseklik','urunplakasize','urunsize'));
     }
 
 

@@ -2,6 +2,14 @@
 
 namespace App\Http\Controllers\Admin\User;
 
+use App\Models\KategoriUrun\Uruncerceverenk;
+use App\Models\KategoriUrun\Uruncert;
+use App\Models\KategoriUrun\Uruncolor;
+use App\Models\KategoriUrun\Urunmalzeme;
+use App\Models\KategoriUrun\Urunmasacap;
+use App\Models\KategoriUrun\Urunogrencimasayukseklik;
+use App\Models\KategoriUrun\Urunplakasize;
+use App\Models\KategoriUrun\Urunpsize;
 use App\User;
 use App\Userorder;
 use Illuminate\Http\Request;
@@ -19,9 +27,17 @@ class AdminUserController extends Controller
 
         $users = User::all();
 
+        $uruncerceve = Uruncerceverenk::all()->count();
+        $uruncert = Uruncert::all()->count();
+        $uruncolor = Uruncolor::all()->count();
+        $urunmalzeme = Urunmalzeme::all()->count();
+        $urunmasacap = Urunmasacap::all()->count();
+        $urunoogrencimasayukseklik = Urunogrencimasayukseklik::all()->count();
+        $urunplakasize = Urunplakasize::all()->count();
+        $urunsize = Urunpsize::all()->count();
 
-
-        return view('backend.customer.index',compact('users'));
+        return view('backend.customer.index',compact('users','uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap',
+            'urunoogrencimasayukseklik','urunplakasize','urunsize'));
     }
 
     public function show($id)
@@ -31,10 +47,18 @@ class AdminUserController extends Controller
         $userorder = Userorder::where('user_id',$id)->get();
 
 
+        $uruncerceve = Uruncerceverenk::all()->count();
+        $uruncert = Uruncert::all()->count();
+        $uruncolor = Uruncolor::all()->count();
+        $urunmalzeme = Urunmalzeme::all()->count();
+        $urunmasacap = Urunmasacap::all()->count();
+        $urunoogrencimasayukseklik = Urunogrencimasayukseklik::all()->count();
+        $urunplakasize = Urunplakasize::all()->count();
+        $urunsize = Urunpsize::all()->count();
 
 
-
-        return view('backend.customer.show',compact('users',))->with('userorder',$userorder);
+        return view('backend.customer.show',compact('users','uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap',
+            'urunoogrencimasayukseklik','urunplakasize','urunsize'))->with('userorder',$userorder);
     }
 
 

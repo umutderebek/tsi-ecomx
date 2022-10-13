@@ -5,6 +5,14 @@ namespace App\Http\Controllers\Admin\Urun;
 use App\Models\Blog\BlogKategori;
 use App\Models\KategoriUrun\Kategori;
 use App\Models\KategoriUrun\Urun;
+use App\Models\KategoriUrun\Uruncerceverenk;
+use App\Models\KategoriUrun\Uruncert;
+use App\Models\KategoriUrun\Uruncolor;
+use App\Models\KategoriUrun\Urunmalzeme;
+use App\Models\KategoriUrun\Urunmasacap;
+use App\Models\KategoriUrun\Urunogrencimasayukseklik;
+use App\Models\KategoriUrun\Urunplakasize;
+use App\Models\KategoriUrun\Urunpsize;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -21,13 +29,32 @@ class AdminUrunKategoriController extends Controller
     {
         $kats = Kategori::all();
 
-        return view('backend.category.kategori-index', compact('kats'));
+        $uruncerceve = Uruncerceverenk::all()->count();
+        $uruncert = Uruncert::all()->count();
+        $uruncolor = Uruncolor::all()->count();
+        $urunmalzeme = Urunmalzeme::all()->count();
+        $urunmasacap = Urunmasacap::all()->count();
+        $urunoogrencimasayukseklik = Urunogrencimasayukseklik::all()->count();
+        $urunplakasize = Urunplakasize::all()->count();
+        $urunsize = Urunpsize::all()->count();
+
+        return view('backend.category.kategori-index', compact('kats','uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap',
+            'urunoogrencimasayukseklik','urunplakasize','urunsize'));
     }
 
     public function form()
     {
+        $uruncerceve = Uruncerceverenk::all()->count();
+        $uruncert = Uruncert::all()->count();
+        $uruncolor = Uruncolor::all()->count();
+        $urunmalzeme = Urunmalzeme::all()->count();
+        $urunmasacap = Urunmasacap::all()->count();
+        $urunoogrencimasayukseklik = Urunogrencimasayukseklik::all()->count();
+        $urunplakasize = Urunplakasize::all()->count();
+        $urunsize = Urunpsize::all()->count();
 
-        return view('backend.category.kategori-form');
+        return view('backend.category.kategori-form', compact('uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap',
+            'urunoogrencimasayukseklik','urunplakasize','urunsize'));
     }
 
     public function kaydet(Request $request)
@@ -57,8 +84,18 @@ class AdminUrunKategoriController extends Controller
         $kategori = Kategori::find($id);
         $kategoriler = Kategori::all();
 
+        $uruncerceve = Uruncerceverenk::all()->count();
+        $uruncert = Uruncert::all()->count();
+        $uruncolor = Uruncolor::all()->count();
+        $urunmalzeme = Urunmalzeme::all()->count();
+        $urunmasacap = Urunmasacap::all()->count();
+        $urunoogrencimasayukseklik = Urunogrencimasayukseklik::all()->count();
+        $urunplakasize = Urunplakasize::all()->count();
+        $urunsize = Urunpsize::all()->count();
+
         // $data = DB::table('kategori')->get()->where('id',$id);
-        return view('backend.category.kategori-edit', compact('kategori'));
+        return view('backend.category.kategori-edit', compact('kategori','uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap',
+            'urunoogrencimasayukseklik','urunplakasize','urunsize'));
 
     }
 

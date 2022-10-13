@@ -10,6 +10,14 @@ use App\Models\Forms\Contact;
 
 use App\Models\KategoriUrun\Kategori;
 use App\Models\KategoriUrun\Urun;
+use App\Models\KategoriUrun\Uruncerceverenk;
+use App\Models\KategoriUrun\Uruncert;
+use App\Models\KategoriUrun\Uruncolor;
+use App\Models\KategoriUrun\Urunmalzeme;
+use App\Models\KategoriUrun\Urunmasacap;
+use App\Models\KategoriUrun\Urunogrencimasayukseklik;
+use App\Models\KategoriUrun\Urunplakasize;
+use App\Models\KategoriUrun\Urunpsize;
 use App\Models\Subscribers;
 use App\Models\Treatment\EKategori;
 use App\Models\Treatment\Endustri;
@@ -89,12 +97,23 @@ class AdminController extends Controller
         ]);
 
 
+        $uruncerceve = Uruncerceverenk::all()->count();
+        $uruncert = Uruncert::all()->count();
+        $uruncolor = Uruncolor::all()->count();
+        $urunmalzeme = Urunmalzeme::all()->count();
+        $urunmasacap = Urunmasacap::all()->count();
+        $urunoogrencimasayukseklik = Urunogrencimasayukseklik::all()->count();
+        $urunplakasize = Urunplakasize::all()->count();
+        $urunsize = Urunpsize::all()->count();
+
+
 
 
 
 
         return view('backend.adminpanel',compact('sbs','blog',
             'blogkategori','iletisimliste',
-            'user','user_dogru','user_false','chart','chart2','chart3','chart4'));
+            'user','user_dogru','user_false','chart','chart2','chart3','chart4'
+            ,'uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap','urunoogrencimasayukseklik','urunplakasize','urunsize'));
     }
 }
