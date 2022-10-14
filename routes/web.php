@@ -30,6 +30,8 @@ Route::get('/haberler/{id}','TrpageController@post')->name('tr.sblog');
 Route::get('/category/{slug}','Eticaret\KategoriController@index')->name('kategori');
 
 
+Route::get('/product/{id}','Eticaret\UrunController@urun')->name('urun');
+
 
 
 ////////////////////////////
@@ -333,23 +335,34 @@ Route::group(['prefix' => 'Admin-attributes-ogrenci-masa-yükseklik'], function 
 
 Route::group(['prefix' => 'Admin-attributes-urun-plaka-size'], function ()
 {
-    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@umalzemeindex')->name('admin.urunplakas.index');
-    Route::get('/yeni','Admin\Attribute\AttributeController@umalzemeform')->name('admin.urunplakas.yeni');
-    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@umalzemeedit')->name('admin.urunplakas.duzenle');
-    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@umalzemekaydet')->name('admin.urunplakas.kaydet');
-    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@umalzemeguncelle')->name('admin.urunplakas.guncelle');
-    Route::get('/sil/{id}','Admin\Attribute\AttributeController@umalzemesil')->name('admin.urunplakas.sil');
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@uplakasindex')->name('admin.urunplakas.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@uplakasform')->name('admin.urunplakas.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@uplakasedit')->name('admin.urunplakas.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@uplakaskaydet')->name('admin.urunplakas.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@uplakasguncelle')->name('admin.urunplakas.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@uplakassil')->name('admin.urunplakas.sil');
 
 });
 
-Route::group(['prefix' => 'Admin-attributes-urun-size'], function ()
+Route::group(['prefix' => 'Admin-attributes-urun-en-size'], function ()
 {
-    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@umalzemeindex')->name('admin.urunsize.index');
-    Route::get('/yeni','Admin\Attribute\AttributeController@umalzemeform')->name('admin.urunsize.yeni');
-    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@umalzemeedit')->name('admin.urunsize.duzenle');
-    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@umalzemekaydet')->name('admin.urunsize.kaydet');
-    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@umalzemeguncelle')->name('admin.urunsize.guncelle');
-    Route::get('/sil/{id}','Admin\Attribute\AttributeController@umalzemesil')->name('admin.urunsize.sil');
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@usizeindex')->name('admin.size.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@usizeform')->name('admin.size.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@usizeedit')->name('admin.size.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@usizekaydet')->name('admin.size.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@usizeguncelle')->name('admin.size.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@usizesil')->name('admin.size.sil');
+
+});
+
+Route::group(['prefix' => 'Admin-attributes-urun-boy-size'], function ()
+{
+    Route::match(['get','post'],'/','Admin\Attribute\AttributeController@uboysizeindex')->name('admin.boysize.index');
+    Route::get('/yeni','Admin\Attribute\AttributeController@uboysizeform')->name('admin.boysize.yeni');
+    Route::get('/duzenle/{id}','Admin\Attribute\AttributeController@uboysizeedit')->name('admin.boysize.duzenle');
+    Route::post('/kaydet/{id?}','Admin\Attribute\AttributeController@uboysizekaydet')->name('admin.boysize.kaydet');
+    Route::post('/guncelle/{id?}','Admin\Attribute\AttributeController@uboysizeguncelle')->name('admin.boysize.guncelle');
+    Route::get('/sil/{id}','Admin\Attribute\AttributeController@uboysizesil')->name('admin.boysize.sil');
 
 });
 

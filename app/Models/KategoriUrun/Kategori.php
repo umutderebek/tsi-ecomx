@@ -25,6 +25,8 @@ class Kategori extends Model
         return $this->belongsToMany('App\Models\KategoriUrun\Urun','kategori_urun');
     }
 
+
+
     public function children()
     {
         return $this->hasMany('App\Models\KategoriUrun\Kategori', 'üst_id');

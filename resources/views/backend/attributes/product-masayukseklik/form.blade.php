@@ -10,36 +10,6 @@
             <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
                 <!--begin::Toolbar container-->
                 <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
-                    <!--begin::Page title-->
-                    <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
-                        <!--begin::Title-->
-                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Edit Category</h1>
-                        <!--end::Title-->
-                        <!--begin::Breadcrumb-->
-                        <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
-                            <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">
-                                <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
-                            </li>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <li class="breadcrumb-item">
-                                <span class="bullet bg-gray-400 w-5px h-2px"></span>
-                            </li>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">Catalog</li>
-                            <!--end::Item-->
-                            <li class="breadcrumb-item">
-                                <span class="bullet bg-gray-400 w-5px h-2px"></span>
-                            </li>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">Edit Category</li>
-                            <!--end::Item-->
-                        </ul>
-                        <!--end::Breadcrumb-->
-                    </div>
 
                 </div>
                 <!--end::Toolbar container-->
@@ -49,7 +19,7 @@
             <div id="kt_app_content" class="app-content flex-column-fluid">
                 <!--begin::Content container-->
                 <div id="kt_app_content_container" class="app-container container-xxl">
-                    <form method="post" class="form d-flex flex-column flex-lg-row" action="{{route('admin.color.kaydet')}}" enctype="multipart/form-data">
+                    <form method="post" class="form d-flex flex-column flex-lg-row" action="{{route('admin.masayukseklik.kaydet')}}" enctype="multipart/form-data">
                         @csrf
 
                         <!--begin::Aside column-->
@@ -111,36 +81,36 @@
                                 <div class="card-body pt-0">
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Color Default</label>
-                                        {!! Form::text('default',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Color Default']) !!}
+                                        <label class="required form-label">Masa Yukseklik Default</label>
+                                        {!! Form::text('default',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Masa Yukseklik  Default']) !!}
 
                                     </div>
 
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Color Order</label>
-                                        {!! Form::text('order',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Color Order']) !!}
+                                        <label class="required form-label">Masa Yukseklik  Order</label>
+                                        {!! Form::text('order',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Masa Yukseklik  Order']) !!}
 
                                     </div>
                                     <!--begin::Input group-->
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Color Name</label>
-                                        {!! Form::text('name',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Color Name']) !!}
+                                        <label class="required form-label">Masa Yukseklik  Name</label>
+                                        {!! Form::text('name',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Masa Yukseklik  Name']) !!}
 
                                     </div>
 
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Color Sku</label>
-                                        {!! Form::text('sku',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Color Sku']) !!}
+                                        <label class="required form-label">Masa Yukseklik  Sku</label>
+                                        {!! Form::text('sku',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Masa Yukseklik  Sku']) !!}
 
                                     </div>
 
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Color Price</label>
-                                        {!! Form::text('price',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Color Price']) !!}
+                                        <label class="required form-label">Masa Yukseklik  Price</label>
+                                        {!! Form::text('price',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Masa Yukseklik  Price']) !!}
 
                                     </div>
 

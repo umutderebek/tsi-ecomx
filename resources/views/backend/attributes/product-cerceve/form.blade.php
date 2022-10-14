@@ -11,35 +11,6 @@
                 <!--begin::Toolbar container-->
                 <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
                     <!--begin::Page title-->
-                    <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
-                        <!--begin::Title-->
-                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Edit Category</h1>
-                        <!--end::Title-->
-                        <!--begin::Breadcrumb-->
-                        <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
-                            <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">
-                                <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
-                            </li>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <li class="breadcrumb-item">
-                                <span class="bullet bg-gray-400 w-5px h-2px"></span>
-                            </li>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">Catalog</li>
-                            <!--end::Item-->
-                            <li class="breadcrumb-item">
-                                <span class="bullet bg-gray-400 w-5px h-2px"></span>
-                            </li>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">Edit Category</li>
-                            <!--end::Item-->
-                        </ul>
-                        <!--end::Breadcrumb-->
-                    </div>
 
                 </div>
                 <!--end::Toolbar container-->
@@ -76,7 +47,6 @@
                                 <div class="card-body pt-0">
                                     <!--begin::Select2-->
                                     <select class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_category_status_select" name="yayin">
-                                        <option></option>
                                         <option value="1" >Published</option>
                                         <option value="0" >Unpublished</option>
                                     </select>
@@ -112,42 +82,37 @@
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
                                         <label class="required form-label">Cerceve Default</label>
-                                        {!! Form::text('default',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Category Name']) !!}
+                                        {!! Form::text('default',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Cerceve Default']) !!}
 
                                     </div>
 
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
                                         <label class="required form-label">Cerceve Order</label>
-                                        {!! Form::text('order',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Category Name']) !!}
+                                        {!! Form::text('order',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Cerceve Order']) !!}
 
                                     </div>
                                     <!--begin::Input group-->
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Cerceve Name</label>
-                                        {!! Form::text('name',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Category Name']) !!}
+                                        <label class="required form-label">Cerceve  Name</label>
+                                        {!! Form::text('name',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Cerceve  Name']) !!}
 
                                     </div>
 
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
                                         <label class="required form-label">Cerceve Sku</label>
-                                        {!! Form::text('sku',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Category Name']) !!}
+                                        {!! Form::text('sku',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Cerceve Sku']) !!}
 
                                     </div>
 
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
                                         <label class="required form-label">Cerceve Price</label>
-                                        {!! Form::text('price',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Category Name']) !!}
+                                        {!! Form::text('price',null, ['class' => 'form-control mb-2 ',  'placeholder' => 'Cerceve Price']) !!}
 
                                     </div>
-
-
-
-
-                                </div>
                                 <!--end::Card header-->
 
                             </div>

@@ -380,7 +380,7 @@
 
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.color.index')}}">
+                            <a class="menu-link" href="{{route('admin.urunplakas.index')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -394,13 +394,27 @@
 
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.color.index')}}">
+                            <a class="menu-link" href="{{route('admin.size.index')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Ürün  Size</span>
+                                <span class="menu-title">Ürün En Size</span>
                                 <span class="menu-badge">
-                                <span class="badge badge-success">{{$urunsize}}</span>
+                                <span class="badge badge-success">{{$urunensize}}</span>
+                                </span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.boysize.index')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Ürün Boy Size</span>
+                                <span class="menu-badge">
+                                <span class="badge badge-success">{{$urunboysize}}</span>
                                 </span>
                             </a>
                             <!--end:Menu link-->

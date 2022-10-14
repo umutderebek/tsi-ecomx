@@ -17,9 +17,8 @@
             <div id="kt_app_content" class="app-content flex-column-fluid">
                 <!--begin::Content container-->
                 <div id="kt_app_content_container" class="app-container container-xxl">
-                    <form method="post" class="form d-flex flex-column flex-lg-row" action="{{route('admin.color.guncelle',$color->id)}}" enctype="multipart/form-data">
+                    <form method="post" class="form d-flex flex-column flex-lg-row" action="{{route('admin.urunplakas.guncelle',$plakasize->id)}}" enctype="multipart/form-data">
                         @csrf
-
                         <!--begin::Aside column-->
                         <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
                             <!--begin::Thumbnail settings-->
@@ -35,7 +34,7 @@
                                     <!--end::Card title-->
                                     <!--begin::Card toolbar-->
                                     <div class="card-toolbar">
-                                        <div class="rounded-circle {{ $color->yayin === 1 ? "bg-success" : "bg-danger"}} w-15px h-15px"></div>
+                                        <div class="rounded-circle {{ $plakasize->yayin === 1 ? "bg-success" : "bg-danger"}} w-15px h-15px"></div>
                                     </div>
                                     <!--begin::Card toolbar-->
                                 </div>
@@ -45,8 +44,8 @@
                                     <!--begin::Select2-->
                                     <select class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_category_status_select" name="yayin">
                                         <option></option>
-                                        <option value="1" {{ $color->yayin === 1 ? "selected" : ""}}>Published</option>
-                                        <option value="0" {{ $color->yayin === 0 ? "selected" : ""}}>Unpublished</option>
+                                        <option value="1" {{ $plakasize->yayin === 1 ? "selected" : ""}}>Published</option>
+                                        <option value="0" {{ $plakasize->yayin === 0 ? "selected" : ""}}>Unpublished</option>
                                     </select>
                                     <!--end::Select2-->
                                     <!--begin::Description-->
@@ -79,36 +78,36 @@
                                 <div class="card-body pt-0">
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Malzeme Default</label>
-                                        {!! Form::text('default',$color->default, ['class' => 'form-control mb-2 ',  'placeholder' => 'Category Name']) !!}
+                                        <label class="required form-label">Plaka Size Default</label>
+                                        {!! Form::text('default',$plakasize->default, ['class' => 'form-control mb-2 ',  'placeholder' => ' Default']) !!}
 
                                     </div>
 
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Malzeme Order</label>
-                                        {!! Form::text('order',$color->order, ['class' => 'form-control mb-2 ',  'placeholder' => 'Category Name']) !!}
+                                        <label class="required form-label">Plaka Size Order</label>
+                                        {!! Form::text('order',$plakasize->order, ['class' => 'form-control mb-2 ',  'placeholder' => ' Order']) !!}
 
                                     </div>
                                     <!--begin::Input group-->
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Malzeme Name</label>
-                                        {!! Form::text('name',$color->name, ['class' => 'form-control mb-2 ',  'placeholder' => 'Category Name']) !!}
+                                        <label class="required form-label">Plaka Size Name</label>
+                                        {!! Form::text('name',$plakasize->name, ['class' => 'form-control mb-2 ',  'placeholder' => ' Name']) !!}
 
                                     </div>
 
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Malzeme Sku</label>
-                                        {!! Form::text('sku',$color->sku, ['class' => 'form-control mb-2 ',  'placeholder' => 'Category Name']) !!}
+                                        <label class="required form-label">Plaka Size Sku</label>
+                                        {!! Form::text('sku',$plakasize->sku, ['class' => 'form-control mb-2 ',  'placeholder' => 'Sku']) !!}
 
                                     </div>
 
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label">Malzeme Price</label>
-                                        {!! Form::text('price',$color->price, ['class' => 'form-control mb-2 ',  'placeholder' => 'Category Name']) !!}
+                                        <label class="required form-label">Plaka Size Price</label>
+                                        {!! Form::text('price',$plakasize->price, ['class' => 'form-control mb-2 ',  'placeholder' => 'Price']) !!}
 
                                     </div>
 
@@ -121,7 +120,7 @@
                             </div>
                             <div class="d-flex justify-content-end">
                                 <!--begin::Button-->
-                                <a href="{{route('admin.malzeme.index')}}" id="kt_ecommerce_add_product_cancel" class="btn btn-danger me-5">Cancel</a>
+                                <a href="{{route('admin.masayukseklik.index')}}" id="kt_ecommerce_add_product_cancel" class="btn btn-danger me-5">Cancel</a>
                                 <!--end::Button-->
                                 <!--begin::Button-->
                                 <button type="submit" id="kt_ecommerce_add_category_submit" class="btn btn-primary">

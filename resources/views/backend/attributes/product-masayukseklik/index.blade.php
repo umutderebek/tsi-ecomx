@@ -28,7 +28,7 @@
                     <!--begin::Card toolbar-->
                     <div class="card-toolbar">
                         <!--begin::Add customer-->
-                        <a href="{{route('admin.color.yeni')}}" class="btn btn-primary">Add Certificate</a>
+                        <a href="{{route('admin.masayukseklik.yeni')}}" class="btn btn-primary">Add Masa Yükseklik</a>
                         <!--end::Add customer-->
                     </div>
                     <!--end::Card toolbar-->
@@ -42,17 +42,17 @@
                         <thead>
                         <!--begin::Table row-->
                         <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                            <th class="min-w-100px">Cerceve</th>
-                            <th class="min-w-100px">Cerceve Name</th>
-                            <th class="min-w-100px">Cerceve Sku</th>
-                            <th class="min-w-100px">Cerceve Price</th>
-                            <th class="min-w-100px">Cerceve Order</th>
-                            <th class="min-w-100px">Cerceve Status</th>
+                            <th class="min-w-100px">Masa Yükseklik</th>
+                            <th class="min-w-100px">Masa Yükseklik Name</th>
+                            <th class="min-w-100px">Masa Yükseklik Sku</th>
+                            <th class="min-w-100px">Masa Yükseklik Price</th>
+                            <th class="min-w-100px">Masa Yükseklik Order</th>
+                            <th class="min-w-100px">Masa Yükseklik Status</th>
                             <th class="text-end min-w-70px">Actions</th>
                         </tr>
                         <!--end::Table row-->
                         </thead>
-                        @foreach($color as $kat)
+                        @foreach($masayukseklik as $kat)
                             <tbody class="fw-semibold text-gray-600">
                             <tr>
                                 <td>{{$kat->id}}</td>
@@ -86,12 +86,12 @@
                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3">
-                                            <a href="{{route('admin.color.duzenle',$kat->id)}}" class="menu-link px-3">Edit</a>
+                                            <a href="{{route('admin.masayukseklik.duzenle',$kat->id)}}" class="menu-link px-3">Edit</a>
                                         </div>
                                         <!--end::Menu item-->
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3">
-                                            <a href="{{ route('admin.color.sil',$kat->id) }}" class="menu-link px-3" data-kt-ecommerce-category-filter="delete_row">Delete</a>
+                                            <a href="{{ route('admin.masayukseklik.sil',$kat->id) }}" class="menu-link px-3" data-kt-ecommerce-category-filter="delete_row">Delete</a>
                                         </div>
                                         <!--end::Menu item-->
                                     </div>

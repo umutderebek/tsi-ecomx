@@ -10,6 +10,7 @@ use App\Models\Forms\Contact;
 
 use App\Models\KategoriUrun\Kategori;
 use App\Models\KategoriUrun\Urun;
+use App\Models\KategoriUrun\Urunboysize;
 use App\Models\KategoriUrun\Uruncerceverenk;
 use App\Models\KategoriUrun\Uruncert;
 use App\Models\KategoriUrun\Uruncolor;
@@ -97,6 +98,7 @@ class AdminController extends Controller
         ]);
 
 
+        $urunboysize = Urunboysize::all()->count();
         $uruncerceve = Uruncerceverenk::all()->count();
         $uruncert = Uruncert::all()->count();
         $uruncolor = Uruncolor::all()->count();
@@ -104,16 +106,11 @@ class AdminController extends Controller
         $urunmasacap = Urunmasacap::all()->count();
         $urunoogrencimasayukseklik = Urunogrencimasayukseklik::all()->count();
         $urunplakasize = Urunplakasize::all()->count();
-        $urunsize = Urunpsize::all()->count();
-
-
-
-
-
+        $urunensize = Urunpsize::all()->count();
 
         return view('backend.adminpanel',compact('sbs','blog',
             'blogkategori','iletisimliste',
             'user','user_dogru','user_false','chart','chart2','chart3','chart4'
-            ,'uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap','urunoogrencimasayukseklik','urunplakasize','urunsize'));
+            ,'uruncerceve','uruncert','uruncolor','urunmalzeme','urunmasacap','urunoogrencimasayukseklik','urunplakasize','urunensize','urunboysize'));
     }
 }

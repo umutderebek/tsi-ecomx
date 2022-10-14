@@ -15,7 +15,9 @@ class KategoriController extends Controller
        $kategori = Kategori::where('slug',$slug)->firstOrFail();
        $altkat = Kategori::where('üst_id',$kategori->id)->get();
 
+       $urunler = $kategori->urunler()->paginate(9);
 
-       return view('frontend.category.kategori',compact('kategori','kategoriler','altkat'));
+
+       return view('frontend.category.kategori',compact('kategori','kategoriler','altkat','urunler'));
    }
 }
